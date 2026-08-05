@@ -1,0 +1,6 @@
+[INFO] Loaded graph from bipartite4x4.mtx: n=8, m=16
+[INFO] grid mode = sqrt, eta = 3, grid = 3x3 = 9 cells
+ILP_RESULT: beta=3 status=OPTIMAL
+METRIC: ilp_solve_time_s=1.190
+METRIC: ilp_status=OPTIMAL
+METRIC: ilp_best_obj=3

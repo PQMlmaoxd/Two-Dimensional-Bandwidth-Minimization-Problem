@@ -1,0 +1,6 @@
+[INFO] Loaded graph from can___24.mtx: n=24, m=92
+[INFO] grid mode = nxn, grid = 24x24 = 576 cells
+ILP_RESULT: beta=2 status=OPTIMAL
+METRIC: ilp_solve_time_s=164.950
+METRIC: ilp_status=OPTIMAL
+METRIC: ilp_best_obj=2

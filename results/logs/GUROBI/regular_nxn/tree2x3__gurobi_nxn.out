@@ -1,0 +1,6 @@
+[INFO] Loaded graph from tree2x3.mtx: n=13, m=12
+[INFO] grid mode = nxn, grid = 13x13 = 169 cells
+ILP_RESULT: beta=2 status=OPTIMAL
+METRIC: ilp_solve_time_s=8.040
+METRIC: ilp_status=OPTIMAL
+METRIC: ilp_best_obj=2

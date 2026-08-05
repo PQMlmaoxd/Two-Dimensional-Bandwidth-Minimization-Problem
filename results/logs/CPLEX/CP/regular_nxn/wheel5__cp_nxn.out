@@ -1,0 +1,6 @@
+[INFO] Loaded graph from wheel5.mtx: n=5, m=8
+[INFO] grid mode = nxn, grid = 5x5 = 25 cells
+CP_RESULT: beta=2 status=OPTIMAL
+METRIC: cp_solve_time_s=1.290
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=2

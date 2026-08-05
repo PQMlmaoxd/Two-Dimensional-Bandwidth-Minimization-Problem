@@ -1,0 +1,6 @@
+[INFO] Loaded graph from impcol_a.mtx: n=207, m=572
+[INFO] grid mode = sqrt, eta = 15, grid = 15x15 = 225 cells
+ILP_RESULT: beta=15 status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=15

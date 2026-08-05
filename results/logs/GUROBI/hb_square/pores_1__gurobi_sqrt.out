@@ -1,0 +1,6 @@
+[INFO] Loaded graph from pores_1.mtx: n=30, m=180
+[INFO] grid mode = sqrt, eta = 6, grid = 6x6 = 36 cells
+ILP_RESULT: beta=3 status=OPTIMAL
+METRIC: ilp_solve_time_s=18.250
+METRIC: ilp_status=OPTIMAL
+METRIC: ilp_best_obj=3

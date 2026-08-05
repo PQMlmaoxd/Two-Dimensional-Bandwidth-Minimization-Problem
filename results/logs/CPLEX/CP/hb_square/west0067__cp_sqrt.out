@@ -1,0 +1,6 @@
+[INFO] Loaded graph from west0067.mtx: n=67, m=294
+[INFO] grid mode = sqrt, eta = 9, grid = 9x9 = 81 cells
+CP_RESULT: beta=6 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=6

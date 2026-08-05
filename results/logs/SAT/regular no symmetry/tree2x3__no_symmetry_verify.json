@@ -1,0 +1,104 @@
+{
+  "bounds": {
+    "certified_lower": 2,
+    "final_verified": 2,
+    "optimal": 2
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/regular set/tree2x3.mtx",
+    "graph_edges": 12,
+    "graph_interpretation": "legacy-edge-list-v1",
+    "matrix": {
+      "cols": 13,
+      "declared_entries": 12,
+      "field": "pattern",
+      "rows": 13,
+      "symmetry": "undirected-edge-list"
+    },
+    "sha256": "1aab52fbe567730fe5bb1cbcad99239ebe2d812405fdaf5ba1279fbe70512a55",
+    "vertices": 13
+  },
+  "method": {
+    "grid": {
+      "cols": 4,
+      "policy": "ceil-sqrt-square",
+      "rows": 4
+    },
+    "id": "no-symmetry",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/comparision/incremental_bandwidth_solver_cutoff_no_symmetry_nodrsa.py"
+  },
+  "outcome": {
+    "elapsed_s": 1.41,
+    "status": "OPTIMAL_BY_UNSAT",
+    "termination": "unsat_below_verified_incumbent",
+    "termination_k": 1,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "legacy_artifact": "regular no symmetry/tree2x3__no_symmetry_verify.txt",
+    "source_reported_k": 2,
+    "source_reported_k_verified": true,
+    "status_source": "logs/runlim_benchmark_regular_no_symmetry.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 2,
+    "constraint_k": 2,
+    "positions": {
+      "1": [
+        1,
+        1
+      ],
+      "10": [
+        1,
+        2
+      ],
+      "11": [
+        3,
+        3
+      ],
+      "12": [
+        2,
+        2
+      ],
+      "13": [
+        1,
+        3
+      ],
+      "2": [
+        2,
+        3
+      ],
+      "3": [
+        2,
+        1
+      ],
+      "4": [
+        4,
+        3
+      ],
+      "5": [
+        3,
+        1
+      ],
+      "6": [
+        3,
+        4
+      ],
+      "7": [
+        3,
+        2
+      ],
+      "8": [
+        4,
+        1
+      ],
+      "9": [
+        4,
+        2
+      ]
+    },
+    "valid": true
+  }
+}

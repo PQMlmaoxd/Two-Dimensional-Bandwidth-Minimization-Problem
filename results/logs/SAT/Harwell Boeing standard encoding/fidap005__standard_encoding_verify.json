@@ -1,0 +1,160 @@
+{
+  "bounds": {
+    "certified_lower": 4,
+    "final_verified": 4,
+    "optimal": 4
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/Harwell Boeing set/fidap005.mtx",
+    "graph_edges": 126,
+    "graph_interpretation": "matrix-coordinate-as-edge-v1",
+    "matrix": {
+      "cols": 27,
+      "declared_entries": 279,
+      "field": "real",
+      "rows": 27,
+      "symmetry": "general"
+    },
+    "sha256": "3a7e4f99aa0b41234a9d6e317478ff84ce1c9d0e2ce96c9f47b636d862c8a40d",
+    "vertices": 27
+  },
+  "method": {
+    "grid": {
+      "cols": 6,
+      "policy": "ceil-sqrt-square",
+      "rows": 6
+    },
+    "id": "standard-encoding",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/comparision/incremental_bandwidth_solver_standard_symmetry_nodrsa.py"
+  },
+  "outcome": {
+    "elapsed_s": 14.85,
+    "status": "OPTIMAL_BY_UNSAT",
+    "termination": "unsat_below_verified_incumbent",
+    "termination_k": 3,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "legacy_artifact": "Harwell Boeing standard encoding/fidap005__standard_encoding_verify.txt",
+    "source_reported_k": 4,
+    "source_reported_k_verified": true,
+    "status_source": "logs/runlim_benchmark_standard_encoding.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 4,
+    "constraint_k": 4,
+    "positions": {
+      "1": [
+        6,
+        2
+      ],
+      "10": [
+        4,
+        1
+      ],
+      "11": [
+        4,
+        3
+      ],
+      "12": [
+        2,
+        1
+      ],
+      "13": [
+        2,
+        2
+      ],
+      "14": [
+        2,
+        6
+      ],
+      "15": [
+        2,
+        5
+      ],
+      "16": [
+        1,
+        6
+      ],
+      "17": [
+        3,
+        6
+      ],
+      "18": [
+        5,
+        6
+      ],
+      "19": [
+        5,
+        1
+      ],
+      "2": [
+        3,
+        1
+      ],
+      "20": [
+        3,
+        2
+      ],
+      "21": [
+        1,
+        2
+      ],
+      "22": [
+        2,
+        4
+      ],
+      "23": [
+        3,
+        3
+      ],
+      "24": [
+        1,
+        5
+      ],
+      "25": [
+        2,
+        3
+      ],
+      "26": [
+        4,
+        5
+      ],
+      "27": [
+        6,
+        5
+      ],
+      "3": [
+        4,
+        2
+      ],
+      "4": [
+        1,
+        3
+      ],
+      "5": [
+        4,
+        4
+      ],
+      "6": [
+        3,
+        5
+      ],
+      "7": [
+        1,
+        4
+      ],
+      "8": [
+        3,
+        4
+      ],
+      "9": [
+        5,
+        5
+      ]
+    },
+    "valid": true
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "bounds": {
+    "certified_lower": null,
+    "final_verified": 4,
+    "optimal": null
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/Harwell Boeing set/bcsstk01.mtx",
+    "graph_edges": 176,
+    "graph_interpretation": "matrix-coordinate-as-edge-v1",
+    "matrix": {
+      "cols": 48,
+      "declared_entries": 224,
+      "field": "real",
+      "rows": 48,
+      "symmetry": "symmetric"
+    },
+    "sha256": "90681443b885c9b8781354fa6bfeab8ecb8c53f0f7a4a8961cc4469eb6e2a187",
+    "vertices": 48
+  },
+  "method": {
+    "grid": {
+      "cols": 48,
+      "policy": "n-by-n-square",
+      "rows": 48
+    },
+    "id": "nxn-pairwise",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/incremental_bandwidth_solver_cutoff_symmetry_nxn.py"
+  },
+  "outcome": {
+    "elapsed_s": 3600.0,
+    "status": "TIMEOUT_FEASIBLE",
+    "termination": "wall_timeout",
+    "termination_k": null,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "legacy_artifact": "Harwell Boeing nxn/bcsstk01__incremental_bandwidth_solver_cutoff_symmetry_nxn_verify.txt",
+    "source_reported_k": 4,
+    "source_reported_k_verified": true,
+    "status_source": "submit_src_code/results/csv_res/Harwell-Boeing grid nxn.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 4,
+    "constraint_k": 4,
+    "positions": {
+      "1": [
+        26,
+        32
+      ],
+      "10": [
+        23,
+        24
+      ],
+      "11": [
+        26,
+        28
+      ],
+      "12": [
+        24,
+        28
+      ],
+      "13": [
+        27,
+        29
+      ],
+      "14": [
+        24,
+        24
+      ],
+      "15": [
+        24,
+        26
+      ],
+      "16": [
+        25,
+        24
+      ],
+      "17": [
+        27,
+        26
+      ],
+      "18": [
+        25,
+        27
+      ],
+      "19": [
+        27,
+        30
+      ],
+      "2": [
+        23,
+        28
+      ],
+      "20": [
+        24,
+        27
+      ],
+      "21": [
+        26,
+        27
+      ],
+      "22": [
+        24,
+        25
+      ],
+      "23": [
+        28,
+        29
+      ],
+      "24": [
+        25,
+        28
+      ],
+      "25": [
+        27,
+        31
+      ],
+      "26": [
+        22,
+        29
+      ],
+      "27": [
+        23,
+        26
+      ],
+      "28": [
+        21,
+        28
+      ],
+      "29": [
+        28,
+        30
+      ],
+      "3": [
+        24,
+        29
+      ],
+      "30": [
+        25,
+        32
+      ],
+      "31": [
+        26,
+        30
+      ],
+      "32": [
+        22,
+        28
+      ],
+      "33": [
+        26,
+        25
+      ],
+      "34": [
+        22,
+        25
+      ],
+      "35": [
+        27,
+        27
+      ],
+      "36": [
+        24,
+        30
+      ],
+      "37": [
+        28,
+        28
+      ],
+      "38": [
+        23,
+        27
+      ],
+      "39": [
+        26,
+        24
+      ],
+      "4": [
+        22,
+        27
+      ],
+      "40": [
+        23,
+        23
+      ],
+      "41": [
+        28,
+        26
+      ],
+      "42": [
+        25,
+        29
+      ],
+      "43": [
+        28,
+        27
+      ],
+      "44": [
+        23,
+        25
+      ],
+      "45": [
+        27,
+        25
+      ],
+      "46": [
+        25,
+        25
+      ],
+      "47": [
+        29,
+        27
+      ],
+      "48": [
+        27,
+        28
+      ],
+      "5": [
+        26,
+        31
+      ],
+      "6": [
+        25,
+        30
+      ],
+      "7": [
+        26,
+        29
+      ],
+      "8": [
+        22,
+        26
+      ],
+      "9": [
+        25,
+        26
+      ]
+    },
+    "valid": true
+  }
+}

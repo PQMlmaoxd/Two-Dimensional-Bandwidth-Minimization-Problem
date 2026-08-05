@@ -1,0 +1,45 @@
+{
+  "bounds": {
+    "certified_lower": null,
+    "final_verified": null,
+    "initial_upper_bound": 18,
+    "optimal": null
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/Harwell Boeing set/mcca.mtx",
+    "graph_edges": 1680,
+    "graph_interpretation": "square-adjacency-v1",
+    "matrix": {
+      "cols": 180,
+      "declared_entries": 2659,
+      "field": "real",
+      "rows": 180,
+      "symmetry": "general"
+    },
+    "sha256": "60b1da390aba191aa63ad0034de613aecb196e72a33c91b0e8ab715eae4c060c",
+    "vertices": 180
+  },
+  "method": {
+    "grid": {
+      "cols": 90,
+      "policy": "two-row",
+      "rows": 2
+    },
+    "id": "two-row-cutoff",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/incremental_bandwidth_solver_two_row.py"
+  },
+  "outcome": {
+    "elapsed_s": 3600.0,
+    "status": "TIMEOUT_NO_WITNESS",
+    "termination": "wall_timeout",
+    "termination_k": null,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "roster": "submit_src_code/results/experiment/two_row_UB_bound/roster.csv",
+    "source_artifact": "temp/lin_probe_1ub_4/results/mcca.json"
+  },
+  "schema": "2dbmp-no-witness-v1",
+  "witness": null
+}

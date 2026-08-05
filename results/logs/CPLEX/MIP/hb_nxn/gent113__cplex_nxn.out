@@ -1,0 +1,6 @@
+[INFO] Loaded graph from gent113.mtx: n=113, m=655
+[INFO] grid mode = nxn, grid = 113x113 = 12769 cells
+ILP_RESULT: status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=-1

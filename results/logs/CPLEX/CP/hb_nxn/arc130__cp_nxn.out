@@ -1,0 +1,6 @@
+[INFO] Loaded graph from arc130.mtx: n=130, m=1282
+[INFO] grid mode = nxn, grid = 130x130 = 16900 cells
+CP_RESULT: beta=8 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=8

@@ -1,0 +1,6 @@
+[INFO] Loaded graph from bcspwr01.mtx: n=39, m=85
+[INFO] grid mode = nxn, grid = 39x39 = 1521 cells
+ILP_RESULT: beta=2 status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=2

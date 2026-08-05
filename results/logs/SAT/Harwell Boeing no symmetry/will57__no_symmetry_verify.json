@@ -1,0 +1,280 @@
+{
+  "bounds": {
+    "certified_lower": 3,
+    "final_verified": 3,
+    "optimal": 3
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/Harwell Boeing set/will57.mtx",
+    "graph_edges": 127,
+    "graph_interpretation": "matrix-coordinate-as-edge-v1",
+    "matrix": {
+      "cols": 57,
+      "declared_entries": 281,
+      "field": "pattern",
+      "rows": 57,
+      "symmetry": "general"
+    },
+    "sha256": "1b0632104b72e4e99896f63dc47ac5ce73b3b7975157b1e09223f995250ed2c1",
+    "vertices": 57
+  },
+  "method": {
+    "grid": {
+      "cols": 8,
+      "policy": "ceil-sqrt-square",
+      "rows": 8
+    },
+    "id": "no-symmetry",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/comparision/incremental_bandwidth_solver_cutoff_no_symmetry_nodrsa.py"
+  },
+  "outcome": {
+    "elapsed_s": 6.37,
+    "status": "OPTIMAL_BY_UNSAT",
+    "termination": "unsat_below_verified_incumbent",
+    "termination_k": 2,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "legacy_artifact": "Harwell Boeing no symmetry/will57__no_symmetry_verify.txt",
+    "source_reported_k": 3,
+    "source_reported_k_verified": true,
+    "status_source": "logs/runlim_benchmark_no_symmetry.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 3,
+    "constraint_k": 3,
+    "positions": {
+      "1": [
+        7,
+        3
+      ],
+      "10": [
+        8,
+        3
+      ],
+      "11": [
+        7,
+        2
+      ],
+      "12": [
+        6,
+        2
+      ],
+      "13": [
+        5,
+        3
+      ],
+      "14": [
+        7,
+        4
+      ],
+      "15": [
+        8,
+        8
+      ],
+      "16": [
+        4,
+        5
+      ],
+      "17": [
+        4,
+        2
+      ],
+      "18": [
+        5,
+        5
+      ],
+      "19": [
+        3,
+        5
+      ],
+      "2": [
+        6,
+        4
+      ],
+      "20": [
+        2,
+        4
+      ],
+      "21": [
+        1,
+        6
+      ],
+      "22": [
+        1,
+        5
+      ],
+      "23": [
+        1,
+        8
+      ],
+      "24": [
+        1,
+        7
+      ],
+      "25": [
+        2,
+        8
+      ],
+      "26": [
+        4,
+        8
+      ],
+      "27": [
+        3,
+        8
+      ],
+      "28": [
+        4,
+        7
+      ],
+      "29": [
+        2,
+        7
+      ],
+      "3": [
+        7,
+        7
+      ],
+      "30": [
+        4,
+        3
+      ],
+      "31": [
+        3,
+        2
+      ],
+      "32": [
+        8,
+        6
+      ],
+      "33": [
+        8,
+        7
+      ],
+      "34": [
+        6,
+        7
+      ],
+      "35": [
+        7,
+        8
+      ],
+      "36": [
+        6,
+        8
+      ],
+      "37": [
+        5,
+        7
+      ],
+      "38": [
+        5,
+        8
+      ],
+      "39": [
+        4,
+        6
+      ],
+      "4": [
+        5,
+        6
+      ],
+      "40": [
+        5,
+        4
+      ],
+      "41": [
+        6,
+        3
+      ],
+      "42": [
+        6,
+        6
+      ],
+      "43": [
+        8,
+        5
+      ],
+      "44": [
+        7,
+        5
+      ],
+      "45": [
+        5,
+        2
+      ],
+      "46": [
+        4,
+        1
+      ],
+      "47": [
+        4,
+        4
+      ],
+      "48": [
+        3,
+        3
+      ],
+      "49": [
+        2,
+        5
+      ],
+      "5": [
+        5,
+        1
+      ],
+      "50": [
+        3,
+        6
+      ],
+      "51": [
+        3,
+        7
+      ],
+      "52": [
+        2,
+        6
+      ],
+      "53": [
+        2,
+        3
+      ],
+      "54": [
+        1,
+        4
+      ],
+      "55": [
+        2,
+        2
+      ],
+      "56": [
+        1,
+        3
+      ],
+      "57": [
+        3,
+        4
+      ],
+      "6": [
+        6,
+        1
+      ],
+      "7": [
+        8,
+        2
+      ],
+      "8": [
+        7,
+        6
+      ],
+      "9": [
+        8,
+        4
+      ]
+    },
+    "valid": true
+  }
+}

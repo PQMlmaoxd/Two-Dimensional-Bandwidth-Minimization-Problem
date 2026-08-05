@@ -1,0 +1,6 @@
+[INFO] Loaded graph from can___96.mtx: n=96, m=3600
+[INFO] grid mode = two-row, grid = 2x48 = 96 cells
+CP_RESULT: beta=9 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=9

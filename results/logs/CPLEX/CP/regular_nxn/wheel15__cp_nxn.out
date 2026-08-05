@@ -1,0 +1,6 @@
+[INFO] Loaded graph from wheel15.mtx: n=15, m=28
+[INFO] grid mode = nxn, grid = 15x15 = 225 cells
+CP_RESULT: beta=3 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=3

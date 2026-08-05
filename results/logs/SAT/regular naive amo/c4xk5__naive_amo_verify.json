@@ -1,0 +1,132 @@
+{
+  "bounds": {
+    "certified_lower": 3,
+    "final_verified": 3,
+    "optimal": 3
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/regular set/c4xk5.mtx",
+    "graph_edges": 60,
+    "graph_interpretation": "legacy-edge-list-v1",
+    "matrix": {
+      "cols": 20,
+      "declared_entries": 60,
+      "field": "pattern",
+      "rows": 20,
+      "symmetry": "undirected-edge-list"
+    },
+    "sha256": "bfe752260edf95af6098d2f16ba4c63f228398e6200186e72d7b625ce0a2b518",
+    "vertices": 20
+  },
+  "method": {
+    "grid": {
+      "cols": 5,
+      "policy": "ceil-sqrt-square",
+      "rows": 5
+    },
+    "id": "naive-amo",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/comparision/incremental_bandwidth_solver_cutoff_symmetry_naive_amo_nodrsa.py"
+  },
+  "outcome": {
+    "elapsed_s": 2.7,
+    "status": "OPTIMAL_BY_UNSAT",
+    "termination": "unsat_below_verified_incumbent",
+    "termination_k": 2,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "legacy_artifact": "regular naive amo/c4xk5__naive_amo_verify.txt",
+    "source_reported_k": 3,
+    "source_reported_k_verified": true,
+    "status_source": "logs/runlim_benchmark_regular_naive_amo.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 3,
+    "constraint_k": 3,
+    "positions": {
+      "1": [
+        2,
+        2
+      ],
+      "10": [
+        3,
+        1
+      ],
+      "11": [
+        2,
+        1
+      ],
+      "12": [
+        4,
+        2
+      ],
+      "13": [
+        1,
+        2
+      ],
+      "14": [
+        2,
+        4
+      ],
+      "15": [
+        1,
+        4
+      ],
+      "16": [
+        4,
+        3
+      ],
+      "17": [
+        4,
+        1
+      ],
+      "18": [
+        2,
+        5
+      ],
+      "19": [
+        3,
+        4
+      ],
+      "2": [
+        2,
+        3
+      ],
+      "20": [
+        3,
+        3
+      ],
+      "3": [
+        1,
+        1
+      ],
+      "4": [
+        4,
+        4
+      ],
+      "5": [
+        5,
+        2
+      ],
+      "6": [
+        5,
+        5
+      ],
+      "7": [
+        4,
+        5
+      ],
+      "8": [
+        3,
+        5
+      ],
+      "9": [
+        3,
+        2
+      ]
+    },
+    "valid": true
+  }
+}

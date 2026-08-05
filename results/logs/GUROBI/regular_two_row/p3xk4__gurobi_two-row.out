@@ -1,0 +1,6 @@
+[INFO] Loaded graph from p3xk4.mtx: n=12, m=26
+[INFO] grid mode = two-row, grid = 2x6 = 12 cells
+ILP_RESULT: beta=2 status=OPTIMAL
+METRIC: ilp_solve_time_s=1.200
+METRIC: ilp_status=OPTIMAL
+METRIC: ilp_best_obj=2

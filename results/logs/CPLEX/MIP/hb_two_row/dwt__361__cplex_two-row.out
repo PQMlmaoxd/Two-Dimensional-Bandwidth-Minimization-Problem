@@ -1,0 +1,6 @@
+[INFO] Loaded graph from dwt__361.mtx: n=361, m=3600
+[INFO] grid mode = two-row, grid = 2x181 = 362 cells
+ILP_RESULT: status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=-1

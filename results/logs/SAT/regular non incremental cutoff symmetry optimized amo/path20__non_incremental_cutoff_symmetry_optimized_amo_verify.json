@@ -1,0 +1,132 @@
+{
+  "bounds": {
+    "certified_lower": 1,
+    "final_verified": 1,
+    "optimal": 1
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/regular set/path20.mtx",
+    "graph_edges": 19,
+    "graph_interpretation": "legacy-edge-list-v1",
+    "matrix": {
+      "cols": 20,
+      "declared_entries": 19,
+      "field": "pattern",
+      "rows": 20,
+      "symmetry": "undirected-edge-list"
+    },
+    "sha256": "ecc21d99f90f6a588db9cc21b18af31417c8db58e680a117f60efaec58fb719a",
+    "vertices": 20
+  },
+  "method": {
+    "grid": {
+      "cols": 5,
+      "policy": "ceil-sqrt-square",
+      "rows": 5
+    },
+    "id": "non-incremental-cutoff-symmetry-optimized-amo",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/comparision/non_incremental_bandwidth_solver_cutoff_symmetry_nodrsa.py"
+  },
+  "outcome": {
+    "elapsed_s": 1.58,
+    "status": "OPTIMAL_BY_BOUND",
+    "termination": "minimum_positive_bandwidth",
+    "termination_k": 1,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "legacy_artifact": "regular non incremental cutoff symmetry optimized amo/path20__non_incremental_cutoff_symmetry_optimized_amo_verify.txt",
+    "source_reported_k": 1,
+    "source_reported_k_verified": true,
+    "status_source": "logs/runlim_benchmark_regular_non_incremental_cutoff_symmetry_optimized_amo.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 1,
+    "constraint_k": 1,
+    "positions": {
+      "1": [
+        2,
+        2
+      ],
+      "10": [
+        4,
+        3
+      ],
+      "11": [
+        3,
+        4
+      ],
+      "12": [
+        4,
+        2
+      ],
+      "13": [
+        2,
+        1
+      ],
+      "14": [
+        4,
+        5
+      ],
+      "15": [
+        1,
+        4
+      ],
+      "16": [
+        3,
+        5
+      ],
+      "17": [
+        4,
+        1
+      ],
+      "18": [
+        5,
+        2
+      ],
+      "19": [
+        2,
+        5
+      ],
+      "2": [
+        5,
+        5
+      ],
+      "20": [
+        2,
+        4
+      ],
+      "3": [
+        1,
+        5
+      ],
+      "4": [
+        5,
+        3
+      ],
+      "5": [
+        3,
+        3
+      ],
+      "6": [
+        4,
+        4
+      ],
+      "7": [
+        5,
+        4
+      ],
+      "8": [
+        2,
+        3
+      ],
+      "9": [
+        3,
+        1
+      ]
+    },
+    "valid": true
+  }
+}

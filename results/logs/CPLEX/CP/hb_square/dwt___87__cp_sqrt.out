@@ -1,0 +1,6 @@
+[INFO] Loaded graph from dwt___87.mtx: n=87, m=314
+[INFO] grid mode = sqrt, eta = 10, grid = 10x10 = 100 cells
+CP_RESULT: beta=3 status=OPTIMAL
+METRIC: cp_solve_time_s=144.450
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=3

@@ -1,0 +1,6 @@
+[INFO] Loaded graph from curtis54.mtx: n=54, m=291
+[INFO] grid mode = nxn, grid = 54x54 = 2916 cells
+CP_RESULT: beta=3 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=3

@@ -1,0 +1,6 @@
+[INFO] Loaded graph from e05r0000.mtx: n=236, m=5856
+[INFO] grid mode = sqrt, eta = 16, grid = 16x16 = 256 cells
+CP_RESULT: beta=10 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=10

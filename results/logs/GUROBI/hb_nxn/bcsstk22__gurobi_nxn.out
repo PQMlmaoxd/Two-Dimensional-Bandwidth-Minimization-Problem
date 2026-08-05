@@ -1,0 +1,6 @@
+[INFO] Loaded graph from bcsstk22.mtx: n=138, m=417
+[INFO] grid mode = nxn, grid = 138x138 = 19044 cells
+ILP_RESULT: status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=-1

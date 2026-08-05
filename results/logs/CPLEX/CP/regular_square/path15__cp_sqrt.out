@@ -1,0 +1,6 @@
+[INFO] Loaded graph from path15.mtx: n=15, m=14
+[INFO] grid mode = sqrt, eta = 4, grid = 4x4 = 16 cells
+CP_RESULT: beta=1 status=OPTIMAL
+METRIC: cp_solve_time_s=1.230
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=1

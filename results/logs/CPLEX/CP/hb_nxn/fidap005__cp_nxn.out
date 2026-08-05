@@ -1,0 +1,6 @@
+[INFO] Loaded graph from fidap005.mtx: n=27, m=279
+[INFO] grid mode = nxn, grid = 27x27 = 729 cells
+CP_RESULT: beta=4 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=4

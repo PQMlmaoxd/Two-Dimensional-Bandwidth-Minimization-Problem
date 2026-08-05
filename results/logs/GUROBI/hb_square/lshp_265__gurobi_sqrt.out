@@ -1,0 +1,6 @@
+[INFO] Loaded graph from lshp_265.mtx: n=265, m=1009
+[INFO] grid mode = sqrt, eta = 17, grid = 17x17 = 289 cells
+ILP_RESULT: beta=15 status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=15

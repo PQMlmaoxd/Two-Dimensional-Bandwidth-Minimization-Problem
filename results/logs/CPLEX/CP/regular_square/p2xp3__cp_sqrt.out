@@ -1,0 +1,6 @@
+[INFO] Loaded graph from p2xp3.mtx: n=6, m=7
+[INFO] grid mode = sqrt, eta = 3, grid = 3x3 = 9 cells
+CP_RESULT: beta=1 status=OPTIMAL
+METRIC: cp_solve_time_s=1.190
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=1

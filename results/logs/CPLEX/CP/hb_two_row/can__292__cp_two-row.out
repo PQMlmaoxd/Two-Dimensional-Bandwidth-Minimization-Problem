@@ -1,0 +1,6 @@
+[INFO] Loaded graph from can__292.mtx: n=292, m=3600
+[INFO] grid mode = two-row, grid = 2x146 = 292 cells
+CP_RESULT: status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=-1

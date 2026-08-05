@@ -1,0 +1,6 @@
+[INFO] Loaded graph from bcsstk02.mtx: n=66, m=2211
+[INFO] grid mode = sqrt, eta = 9, grid = 9x9 = 81 cells
+ILP_RESULT: beta=12 status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=12

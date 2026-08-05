@@ -1,0 +1,6 @@
+[INFO] Loaded graph from tub100.mtx: n=100, m=396
+[INFO] grid mode = nxn, grid = 100x100 = 10000 cells
+CP_RESULT: beta=1 status=OPTIMAL
+METRIC: cp_solve_time_s=3.020
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=1

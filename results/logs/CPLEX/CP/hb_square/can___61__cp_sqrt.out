@@ -1,0 +1,6 @@
+[INFO] Loaded graph from can___61.mtx: n=61, m=309
+[INFO] grid mode = sqrt, eta = 8, grid = 8x8 = 64 cells
+CP_RESULT: beta=4 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=4

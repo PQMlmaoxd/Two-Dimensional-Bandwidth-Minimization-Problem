@@ -1,0 +1,92 @@
+{
+  "bounds": {
+    "certified_lower": 1,
+    "final_verified": 1,
+    "optimal": 1
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/regular set/path10.mtx",
+    "graph_edges": 9,
+    "graph_interpretation": "legacy-edge-list-v1",
+    "matrix": {
+      "cols": 10,
+      "declared_entries": 9,
+      "field": "pattern",
+      "rows": 10,
+      "symmetry": "undirected-edge-list"
+    },
+    "sha256": "dfb9571b01c69d25b4ced7c28cfa3a2cc6499c0c2eabe0b333033c3f5a03272e",
+    "vertices": 10
+  },
+  "method": {
+    "grid": {
+      "cols": 4,
+      "policy": "ceil-sqrt-square",
+      "rows": 4
+    },
+    "id": "standard-encoding",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/comparision/incremental_bandwidth_solver_standard_symmetry_nodrsa.py"
+  },
+  "outcome": {
+    "elapsed_s": 0.04,
+    "status": "OPTIMAL_BY_BOUND",
+    "termination": "minimum_positive_bandwidth",
+    "termination_k": 1,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "legacy_artifact": "regular standard encoding/path10__standard_encoding_verify.txt",
+    "source_reported_k": 1,
+    "source_reported_k_verified": true,
+    "status_source": "logs/runlim_benchmark_regular_standard_encoding.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 1,
+    "constraint_k": 1,
+    "positions": {
+      "1": [
+        2,
+        2
+      ],
+      "10": [
+        3,
+        2
+      ],
+      "2": [
+        4,
+        2
+      ],
+      "3": [
+        3,
+        1
+      ],
+      "4": [
+        2,
+        1
+      ],
+      "5": [
+        4,
+        1
+      ],
+      "6": [
+        4,
+        3
+      ],
+      "7": [
+        2,
+        4
+      ],
+      "8": [
+        3,
+        4
+      ],
+      "9": [
+        3,
+        3
+      ]
+    },
+    "valid": true
+  }
+}

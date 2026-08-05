@@ -1,0 +1,6 @@
+[INFO] Loaded graph from ibm32.mtx: n=32, m=126
+[INFO] grid mode = sqrt, eta = 6, grid = 6x6 = 36 cells
+CP_RESULT: beta=4 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=4

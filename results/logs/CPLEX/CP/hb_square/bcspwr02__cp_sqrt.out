@@ -1,0 +1,6 @@
+[INFO] Loaded graph from bcspwr02.mtx: n=49, m=108
+[INFO] grid mode = sqrt, eta = 7, grid = 7x7 = 49 cells
+CP_RESULT: beta=2 status=OPTIMAL
+METRIC: cp_solve_time_s=3.780
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=2

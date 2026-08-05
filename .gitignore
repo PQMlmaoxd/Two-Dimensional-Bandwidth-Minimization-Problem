@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+build/
+*.stdout.log
+*.stderr.log
+*.checkpoint.json

@@ -1,0 +1,6 @@
+[INFO] Loaded graph from ash85.mtx: n=85, m=304
+[INFO] grid mode = nxn, grid = 85x85 = 7225 cells
+ILP_RESULT: beta=12 status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=12

@@ -1,0 +1,280 @@
+{
+  "bounds": {
+    "certified_lower": 3,
+    "final_verified": 3,
+    "optimal": 3
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/Harwell Boeing set/will57.mtx",
+    "graph_edges": 127,
+    "graph_interpretation": "matrix-coordinate-as-edge-v1",
+    "matrix": {
+      "cols": 57,
+      "declared_entries": 281,
+      "field": "pattern",
+      "rows": 57,
+      "symmetry": "general"
+    },
+    "sha256": "1b0632104b72e4e99896f63dc47ac5ce73b3b7975157b1e09223f995250ed2c1",
+    "vertices": 57
+  },
+  "method": {
+    "grid": {
+      "cols": 57,
+      "policy": "n-by-n-square",
+      "rows": 57
+    },
+    "id": "nxn-pairwise",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/incremental_bandwidth_solver_cutoff_symmetry_nxn.py"
+  },
+  "outcome": {
+    "elapsed_s": 126.32,
+    "status": "OPTIMAL_BY_UNSAT",
+    "termination": "unsat_below_verified_incumbent",
+    "termination_k": 2,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "legacy_artifact": "Harwell Boeing nxn/will57__incremental_bandwidth_solver_cutoff_symmetry_nxn_verify.txt",
+    "source_reported_k": 3,
+    "source_reported_k_verified": true,
+    "status_source": "submit_src_code/results/csv_res/Harwell-Boeing grid nxn.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 3,
+    "constraint_k": 3,
+    "positions": {
+      "1": [
+        2,
+        15
+      ],
+      "10": [
+        3,
+        14
+      ],
+      "11": [
+        3,
+        15
+      ],
+      "12": [
+        2,
+        13
+      ],
+      "13": [
+        4,
+        13
+      ],
+      "14": [
+        3,
+        16
+      ],
+      "15": [
+        4,
+        17
+      ],
+      "16": [
+        8,
+        18
+      ],
+      "17": [
+        10,
+        17
+      ],
+      "18": [
+        5,
+        18
+      ],
+      "19": [
+        13,
+        19
+      ],
+      "2": [
+        2,
+        16
+      ],
+      "20": [
+        12,
+        19
+      ],
+      "21": [
+        14,
+        20
+      ],
+      "22": [
+        14,
+        19
+      ],
+      "23": [
+        14,
+        22
+      ],
+      "24": [
+        15,
+        22
+      ],
+      "25": [
+        15,
+        20
+      ],
+      "26": [
+        16,
+        21
+      ],
+      "27": [
+        14,
+        21
+      ],
+      "28": [
+        15,
+        21
+      ],
+      "29": [
+        13,
+        21
+      ],
+      "3": [
+        3,
+        19
+      ],
+      "30": [
+        10,
+        19
+      ],
+      "31": [
+        12,
+        20
+      ],
+      "32": [
+        4,
+        18
+      ],
+      "33": [
+        4,
+        19
+      ],
+      "34": [
+        4,
+        20
+      ],
+      "35": [
+        3,
+        20
+      ],
+      "36": [
+        4,
+        22
+      ],
+      "37": [
+        4,
+        23
+      ],
+      "38": [
+        5,
+        23
+      ],
+      "39": [
+        5,
+        20
+      ],
+      "4": [
+        3,
+        22
+      ],
+      "40": [
+        3,
+        21
+      ],
+      "41": [
+        1,
+        21
+      ],
+      "42": [
+        4,
+        21
+      ],
+      "43": [
+        2,
+        18
+      ],
+      "44": [
+        3,
+        17
+      ],
+      "45": [
+        2,
+        14
+      ],
+      "46": [
+        2,
+        12
+      ],
+      "47": [
+        1,
+        12
+      ],
+      "48": [
+        3,
+        12
+      ],
+      "49": [
+        4,
+        12
+      ],
+      "5": [
+        3,
+        13
+      ],
+      "50": [
+        3,
+        11
+      ],
+      "51": [
+        5,
+        11
+      ],
+      "52": [
+        3,
+        10
+      ],
+      "53": [
+        4,
+        11
+      ],
+      "54": [
+        4,
+        10
+      ],
+      "55": [
+        1,
+        10
+      ],
+      "56": [
+        2,
+        8
+      ],
+      "57": [
+        2,
+        11
+      ],
+      "6": [
+        1,
+        14
+      ],
+      "7": [
+        1,
+        13
+      ],
+      "8": [
+        2,
+        17
+      ],
+      "9": [
+        1,
+        17
+      ]
+    },
+    "valid": true
+  }
+}

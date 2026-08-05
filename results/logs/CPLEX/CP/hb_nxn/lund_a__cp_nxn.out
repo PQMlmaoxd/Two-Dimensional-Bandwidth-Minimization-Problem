@@ -1,0 +1,6 @@
+[INFO] Loaded graph from lund_a.mtx: n=147, m=1298
+[INFO] grid mode = nxn, grid = 147x147 = 21609 cells
+CP_RESULT: beta=6 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=6

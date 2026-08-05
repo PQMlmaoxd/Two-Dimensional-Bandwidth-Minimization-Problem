@@ -1,0 +1,6 @@
+[INFO] Loaded graph from ck104.mtx: n=104, m=3600
+[INFO] grid mode = two-row, grid = 2x52 = 104 cells
+CP_RESULT: beta=7 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=7

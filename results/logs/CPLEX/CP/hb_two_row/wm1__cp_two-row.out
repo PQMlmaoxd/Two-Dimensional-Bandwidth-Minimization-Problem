@@ -1,0 +1,6 @@
+[INFO] Loaded graph from wm1.mtx: n=207, m=3600
+[INFO] grid mode = two-row, grid = 2x104 = 208 cells
+CP_RESULT: status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=-1

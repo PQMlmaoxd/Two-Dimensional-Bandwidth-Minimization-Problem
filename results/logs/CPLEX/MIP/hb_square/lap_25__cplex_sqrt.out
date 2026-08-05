@@ -1,0 +1,6 @@
+[INFO] Loaded graph from lap_25.mtx: n=25, m=97
+[INFO] grid mode = sqrt, eta = 5, grid = 5x5 = 25 cells
+ILP_RESULT: beta=2 status=OPTIMAL
+METRIC: ilp_solve_time_s=1.780
+METRIC: ilp_status=OPTIMAL
+METRIC: ilp_best_obj=2

@@ -1,0 +1,6 @@
+[INFO] Loaded graph from path10.mtx: n=10, m=9
+[INFO] grid mode = nxn, grid = 10x10 = 100 cells
+CP_RESULT: beta=1 status=OPTIMAL
+METRIC: cp_solve_time_s=1.260
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=1

@@ -1,0 +1,6 @@
+[INFO] Loaded graph from steam1.mtx: n=240, m=3600
+[INFO] grid mode = two-row, grid = 2x120 = 240 cells
+CP_RESULT: status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=-1

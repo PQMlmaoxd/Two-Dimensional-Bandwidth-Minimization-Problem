@@ -1,0 +1,80 @@
+{
+  "bounds": {
+    "certified_lower": 3,
+    "final_verified": 3,
+    "optimal": 3
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/regular set/bipartite3x4.mtx",
+    "graph_edges": 12,
+    "graph_interpretation": "legacy-edge-list-v1",
+    "matrix": {
+      "cols": 7,
+      "declared_entries": 12,
+      "field": "pattern",
+      "rows": 7,
+      "symmetry": "undirected-edge-list"
+    },
+    "sha256": "00ef6e8dd0c09562779ba401daf05f63541b6c7c91d25bff41822f2b676001fa",
+    "vertices": 7
+  },
+  "method": {
+    "grid": {
+      "cols": 3,
+      "policy": "ceil-sqrt-square",
+      "rows": 3
+    },
+    "id": "naive-amo",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/comparision/incremental_bandwidth_solver_cutoff_symmetry_naive_amo_nodrsa.py"
+  },
+  "outcome": {
+    "elapsed_s": 1.37,
+    "status": "OPTIMAL_BY_UNSAT",
+    "termination": "unsat_below_verified_incumbent",
+    "termination_k": 2,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "legacy_artifact": "regular naive amo/bipartite3x4__naive_amo_verify.txt",
+    "source_reported_k": 3,
+    "source_reported_k_verified": true,
+    "status_source": "logs/runlim_benchmark_regular_naive_amo.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 3,
+    "constraint_k": 3,
+    "positions": {
+      "1": [
+        1,
+        1
+      ],
+      "2": [
+        2,
+        2
+      ],
+      "3": [
+        3,
+        3
+      ],
+      "4": [
+        2,
+        3
+      ],
+      "5": [
+        2,
+        1
+      ],
+      "6": [
+        1,
+        3
+      ],
+      "7": [
+        3,
+        1
+      ]
+    },
+    "valid": true
+  }
+}

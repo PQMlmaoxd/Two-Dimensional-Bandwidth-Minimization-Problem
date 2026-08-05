@@ -1,0 +1,6 @@
+[INFO] Loaded graph from can___62.mtx: n=62, m=140
+[INFO] grid mode = nxn, grid = 62x62 = 3844 cells
+CP_RESULT: beta=2 status=OPTIMAL
+METRIC: cp_solve_time_s=36.100
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=2

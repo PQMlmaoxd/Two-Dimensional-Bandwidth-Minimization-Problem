@@ -1,0 +1,180 @@
+{
+  "bounds": {
+    "certified_lower": null,
+    "final_verified": 4,
+    "optimal": null
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/Harwell Boeing set/ibm32.mtx",
+    "graph_edges": 90,
+    "graph_interpretation": "matrix-coordinate-as-edge-v1",
+    "matrix": {
+      "cols": 32,
+      "declared_entries": 126,
+      "field": "pattern",
+      "rows": 32,
+      "symmetry": "general"
+    },
+    "sha256": "5c84155b323f68cb42dd8aad8dba8bb946362aa29384c00137a180a671f91568",
+    "vertices": 32
+  },
+  "method": {
+    "grid": {
+      "cols": 6,
+      "policy": "ceil-sqrt-square",
+      "rows": 6
+    },
+    "id": "no-symmetry",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/comparision/incremental_bandwidth_solver_cutoff_no_symmetry_nodrsa.py"
+  },
+  "outcome": {
+    "elapsed_s": 3600.0,
+    "status": "TIMEOUT_FEASIBLE",
+    "termination": "wall_timeout",
+    "termination_k": null,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "legacy_artifact": "Harwell Boeing no symmetry/ibm32__no_symmetry_verify.txt",
+    "source_reported_k": 4,
+    "source_reported_k_verified": true,
+    "status_source": "logs/runlim_benchmark_no_symmetry.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 4,
+    "constraint_k": 4,
+    "positions": {
+      "1": [
+        1,
+        5
+      ],
+      "10": [
+        4,
+        6
+      ],
+      "11": [
+        3,
+        4
+      ],
+      "12": [
+        2,
+        6
+      ],
+      "13": [
+        6,
+        4
+      ],
+      "14": [
+        6,
+        2
+      ],
+      "15": [
+        2,
+        1
+      ],
+      "16": [
+        1,
+        1
+      ],
+      "17": [
+        3,
+        2
+      ],
+      "18": [
+        1,
+        6
+      ],
+      "19": [
+        3,
+        6
+      ],
+      "2": [
+        1,
+        2
+      ],
+      "20": [
+        2,
+        4
+      ],
+      "21": [
+        4,
+        2
+      ],
+      "22": [
+        4,
+        1
+      ],
+      "23": [
+        4,
+        3
+      ],
+      "24": [
+        5,
+        5
+      ],
+      "25": [
+        2,
+        5
+      ],
+      "26": [
+        4,
+        5
+      ],
+      "27": [
+        5,
+        4
+      ],
+      "28": [
+        3,
+        1
+      ],
+      "29": [
+        5,
+        2
+      ],
+      "3": [
+        2,
+        2
+      ],
+      "30": [
+        1,
+        4
+      ],
+      "31": [
+        6,
+        5
+      ],
+      "32": [
+        5,
+        1
+      ],
+      "4": [
+        1,
+        3
+      ],
+      "5": [
+        5,
+        3
+      ],
+      "6": [
+        2,
+        3
+      ],
+      "7": [
+        4,
+        4
+      ],
+      "8": [
+        3,
+        5
+      ],
+      "9": [
+        3,
+        3
+      ]
+    },
+    "valid": true
+  }
+}

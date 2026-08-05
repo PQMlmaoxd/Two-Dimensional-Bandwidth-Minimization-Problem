@@ -1,0 +1,45 @@
+{
+  "bounds": {
+    "certified_lower": null,
+    "final_verified": null,
+    "initial_upper_bound": 26,
+    "optimal": null
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/Harwell Boeing set/tols90.mtx",
+    "graph_edges": 1449,
+    "graph_interpretation": "square-adjacency-v1",
+    "matrix": {
+      "cols": 90,
+      "declared_entries": 1746,
+      "field": "real",
+      "rows": 90,
+      "symmetry": "general"
+    },
+    "sha256": "a3c52dc1e64060a1406ccdb320cb9f31d64e480bc2d1e7e0831c416a5a6af392",
+    "vertices": 90
+  },
+  "method": {
+    "grid": {
+      "cols": 45,
+      "policy": "two-row",
+      "rows": 2
+    },
+    "id": "two-row-cutoff",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/incremental_bandwidth_solver_two_row.py"
+  },
+  "outcome": {
+    "elapsed_s": 3600.0,
+    "status": "TIMEOUT_NO_WITNESS",
+    "termination": "wall_timeout",
+    "termination_k": null,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "roster": "submit_src_code/results/experiment/two_row_UB_bound/roster.csv",
+    "source_artifact": "temp/lin_probe_2ub/results/tols90.json"
+  },
+  "schema": "2dbmp-no-witness-v1",
+  "witness": null
+}

@@ -1,0 +1,158 @@
+{
+  "bounds": {
+    "certified_lower": 5,
+    "final_verified": 5,
+    "optimal": 5
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/Harwell Boeing set/fidap005.mtx",
+    "graph_edges": 126,
+    "graph_interpretation": "square-adjacency-v1",
+    "matrix": {
+      "cols": 27,
+      "declared_entries": 279,
+      "field": "real",
+      "rows": 27,
+      "symmetry": "general"
+    },
+    "sha256": "3a7e4f99aa0b41234a9d6e317478ff84ce1c9d0e2ce96c9f47b636d862c8a40d",
+    "vertices": 27
+  },
+  "method": {
+    "grid": {
+      "cols": 14,
+      "policy": "two-row",
+      "rows": 2
+    },
+    "id": "two-row-cutoff",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/incremental_bandwidth_solver_two_row.py"
+  },
+  "outcome": {
+    "elapsed_s": 2.25,
+    "status": "OPTIMAL_BY_UNSAT",
+    "termination": "unsat_below_verified_incumbent",
+    "termination_k": 4,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "roster": "submit_src_code/results/experiment/two_row_UB_bound/roster.csv",
+    "source_artifact": "temp/lin_probe_1.5ub/results/fidap005.json"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 5,
+    "constraint_k": 5,
+    "positions": {
+      "1": [
+        2,
+        1
+      ],
+      "10": [
+        1,
+        1
+      ],
+      "11": [
+        1,
+        5
+      ],
+      "12": [
+        2,
+        3
+      ],
+      "13": [
+        2,
+        7
+      ],
+      "14": [
+        2,
+        6
+      ],
+      "15": [
+        1,
+        10
+      ],
+      "16": [
+        1,
+        11
+      ],
+      "17": [
+        1,
+        13
+      ],
+      "18": [
+        2,
+        11
+      ],
+      "19": [
+        2,
+        2
+      ],
+      "2": [
+        2,
+        4
+      ],
+      "20": [
+        1,
+        4
+      ],
+      "21": [
+        1,
+        3
+      ],
+      "22": [
+        1,
+        7
+      ],
+      "23": [
+        2,
+        8
+      ],
+      "24": [
+        1,
+        9
+      ],
+      "25": [
+        1,
+        12
+      ],
+      "26": [
+        2,
+        12
+      ],
+      "27": [
+        2,
+        14
+      ],
+      "3": [
+        2,
+        5
+      ],
+      "4": [
+        1,
+        6
+      ],
+      "5": [
+        1,
+        8
+      ],
+      "6": [
+        2,
+        10
+      ],
+      "7": [
+        1,
+        14
+      ],
+      "8": [
+        2,
+        13
+      ],
+      "9": [
+        2,
+        9
+      ]
+    },
+    "valid": true
+  }
+}

@@ -1,0 +1,6 @@
+[INFO] Loaded graph from cyclePow20-10.mtx: n=20, m=190
+[INFO] grid mode = nxn, grid = 20x20 = 400 cells
+CP_RESULT: beta=6 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=6

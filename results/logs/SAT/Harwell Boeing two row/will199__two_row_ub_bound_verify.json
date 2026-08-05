@@ -1,0 +1,45 @@
+{
+  "bounds": {
+    "certified_lower": null,
+    "final_verified": null,
+    "initial_upper_bound": 29,
+    "optimal": null
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/Harwell Boeing set/will199.mtx",
+    "graph_edges": 660,
+    "graph_interpretation": "square-adjacency-v1",
+    "matrix": {
+      "cols": 199,
+      "declared_entries": 701,
+      "field": "pattern",
+      "rows": 199,
+      "symmetry": "general"
+    },
+    "sha256": "139e8542d8e12806bac7dcfbcf0c764201e6c7b98000169ecdd6052a1cc24405",
+    "vertices": 199
+  },
+  "method": {
+    "grid": {
+      "cols": 100,
+      "policy": "two-row",
+      "rows": 2
+    },
+    "id": "two-row-cutoff",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/incremental_bandwidth_solver_two_row.py"
+  },
+  "outcome": {
+    "elapsed_s": 3600.0,
+    "status": "TIMEOUT_NO_WITNESS",
+    "termination": "wall_timeout",
+    "termination_k": null,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "roster": "submit_src_code/results/experiment/two_row_UB_bound/roster.csv",
+    "source_artifact": "temp/lin_probe_2ub/results/will199.json"
+  },
+  "schema": "2dbmp-no-witness-v1",
+  "witness": null
+}

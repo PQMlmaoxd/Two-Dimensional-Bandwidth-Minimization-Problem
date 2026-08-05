@@ -1,0 +1,6 @@
+[INFO] Loaded graph from tols90.mtx: n=90, m=1746
+[INFO] grid mode = sqrt, eta = 10, grid = 10x10 = 100 cells
+ILP_RESULT: beta=10 status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=10

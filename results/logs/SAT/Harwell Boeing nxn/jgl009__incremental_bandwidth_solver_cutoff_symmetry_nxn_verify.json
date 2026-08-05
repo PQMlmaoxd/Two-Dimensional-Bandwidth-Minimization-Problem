@@ -1,0 +1,88 @@
+{
+  "bounds": {
+    "certified_lower": 3,
+    "final_verified": 3,
+    "optimal": 3
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/Harwell Boeing set/jgl009.mtx",
+    "graph_edges": 32,
+    "graph_interpretation": "matrix-coordinate-as-edge-v1",
+    "matrix": {
+      "cols": 9,
+      "declared_entries": 50,
+      "field": "pattern",
+      "rows": 9,
+      "symmetry": "general"
+    },
+    "sha256": "6471bf7d81186df35bea3d72ad6952c56d285574ad9e8a726cf90d16bc95b692",
+    "vertices": 9
+  },
+  "method": {
+    "grid": {
+      "cols": 9,
+      "policy": "n-by-n-square",
+      "rows": 9
+    },
+    "id": "nxn-pairwise",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/incremental_bandwidth_solver_cutoff_symmetry_nxn.py"
+  },
+  "outcome": {
+    "elapsed_s": 1.28,
+    "status": "OPTIMAL_BY_UNSAT",
+    "termination": "unsat_below_verified_incumbent",
+    "termination_k": 2,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "legacy_artifact": "Harwell Boeing nxn/jgl009__incremental_bandwidth_solver_cutoff_symmetry_nxn_verify.txt",
+    "source_reported_k": 3,
+    "source_reported_k_verified": true,
+    "status_source": "submit_src_code/results/csv_res/Harwell-Boeing grid nxn.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 3,
+    "constraint_k": 3,
+    "positions": {
+      "1": [
+        6,
+        3
+      ],
+      "2": [
+        8,
+        4
+      ],
+      "3": [
+        7,
+        4
+      ],
+      "4": [
+        6,
+        2
+      ],
+      "5": [
+        5,
+        3
+      ],
+      "6": [
+        6,
+        4
+      ],
+      "7": [
+        5,
+        4
+      ],
+      "8": [
+        6,
+        5
+      ],
+      "9": [
+        7,
+        3
+      ]
+    },
+    "valid": true
+  }
+}

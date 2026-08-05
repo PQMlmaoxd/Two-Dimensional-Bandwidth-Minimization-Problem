@@ -1,0 +1,6 @@
+[INFO] Loaded graph from dwt___87.mtx: n=87, m=314
+[INFO] grid mode = nxn, grid = 87x87 = 7569 cells
+ILP_RESULT: beta=42 status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=42

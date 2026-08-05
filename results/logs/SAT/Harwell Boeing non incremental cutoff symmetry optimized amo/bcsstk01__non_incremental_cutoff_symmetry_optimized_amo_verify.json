@@ -1,0 +1,244 @@
+{
+  "bounds": {
+    "certified_lower": null,
+    "final_verified": 4,
+    "optimal": null
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/Harwell Boeing set/bcsstk01.mtx",
+    "graph_edges": 176,
+    "graph_interpretation": "matrix-coordinate-as-edge-v1",
+    "matrix": {
+      "cols": 48,
+      "declared_entries": 224,
+      "field": "real",
+      "rows": 48,
+      "symmetry": "symmetric"
+    },
+    "sha256": "90681443b885c9b8781354fa6bfeab8ecb8c53f0f7a4a8961cc4469eb6e2a187",
+    "vertices": 48
+  },
+  "method": {
+    "grid": {
+      "cols": 7,
+      "policy": "ceil-sqrt-square",
+      "rows": 7
+    },
+    "id": "non-incremental-cutoff-symmetry-optimized-amo",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/comparision/non_incremental_bandwidth_solver_cutoff_symmetry_nodrsa.py"
+  },
+  "outcome": {
+    "elapsed_s": 3600.0,
+    "status": "TIMEOUT_FEASIBLE",
+    "termination": "wall_timeout",
+    "termination_k": null,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "legacy_artifact": "Harwell Boeing non incremental cutoff symmetry optimized amo/bcsstk01__non_incremental_cutoff_symmetry_optimized_amo_verify.txt",
+    "source_reported_k": 4,
+    "source_reported_k_verified": true,
+    "status_source": "logs/runlim_benchmark_non_incremental_cutoff_symmetry_optimized_amo.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 4,
+    "constraint_k": 4,
+    "positions": {
+      "1": [
+        2,
+        3
+      ],
+      "10": [
+        3,
+        5
+      ],
+      "11": [
+        4,
+        1
+      ],
+      "12": [
+        3,
+        1
+      ],
+      "13": [
+        6,
+        1
+      ],
+      "14": [
+        4,
+        4
+      ],
+      "15": [
+        4,
+        5
+      ],
+      "16": [
+        3,
+        6
+      ],
+      "17": [
+        5,
+        2
+      ],
+      "18": [
+        4,
+        2
+      ],
+      "19": [
+        5,
+        3
+      ],
+      "2": [
+        1,
+        4
+      ],
+      "20": [
+        1,
+        5
+      ],
+      "21": [
+        4,
+        7
+      ],
+      "22": [
+        2,
+        6
+      ],
+      "23": [
+        6,
+        5
+      ],
+      "24": [
+        2,
+        2
+      ],
+      "25": [
+        3,
+        2
+      ],
+      "26": [
+        1,
+        7
+      ],
+      "27": [
+        5,
+        6
+      ],
+      "28": [
+        2,
+        7
+      ],
+      "29": [
+        6,
+        3
+      ],
+      "3": [
+        2,
+        5
+      ],
+      "30": [
+        1,
+        2
+      ],
+      "31": [
+        5,
+        1
+      ],
+      "32": [
+        2,
+        4
+      ],
+      "33": [
+        7,
+        5
+      ],
+      "34": [
+        4,
+        6
+      ],
+      "35": [
+        7,
+        2
+      ],
+      "36": [
+        3,
+        3
+      ],
+      "37": [
+        7,
+        1
+      ],
+      "38": [
+        5,
+        5
+      ],
+      "39": [
+        7,
+        6
+      ],
+      "4": [
+        1,
+        6
+      ],
+      "40": [
+        6,
+        7
+      ],
+      "41": [
+        7,
+        4
+      ],
+      "42": [
+        6,
+        4
+      ],
+      "43": [
+        6,
+        2
+      ],
+      "44": [
+        3,
+        7
+      ],
+      "45": [
+        6,
+        6
+      ],
+      "46": [
+        5,
+        7
+      ],
+      "47": [
+        7,
+        3
+      ],
+      "48": [
+        4,
+        3
+      ],
+      "5": [
+        3,
+        4
+      ],
+      "6": [
+        1,
+        1
+      ],
+      "7": [
+        2,
+        1
+      ],
+      "8": [
+        1,
+        3
+      ],
+      "9": [
+        5,
+        4
+      ]
+    },
+    "valid": true
+  }
+}

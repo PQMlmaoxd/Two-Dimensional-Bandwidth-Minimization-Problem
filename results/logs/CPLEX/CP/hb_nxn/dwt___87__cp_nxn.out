@@ -1,0 +1,6 @@
+[INFO] Loaded graph from dwt___87.mtx: n=87, m=314
+[INFO] grid mode = nxn, grid = 87x87 = 7569 cells
+CP_RESULT: beta=3 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=3

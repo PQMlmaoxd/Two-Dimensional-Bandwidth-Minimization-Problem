@@ -1,0 +1,6 @@
+[INFO] Loaded graph from bipartite4x4.mtx: n=8, m=16
+[INFO] grid mode = sqrt, eta = 3, grid = 3x3 = 9 cells
+CP_RESULT: beta=3 status=OPTIMAL
+METRIC: cp_solve_time_s=1.240
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=3

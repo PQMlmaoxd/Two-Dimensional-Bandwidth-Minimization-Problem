@@ -1,0 +1,6 @@
+[INFO] Loaded graph from tree3x2.mtx: n=15, m=14
+[INFO] grid mode = two-row, grid = 2x8 = 16 cells
+CP_RESULT: beta=2 status=OPTIMAL
+METRIC: cp_solve_time_s=1.180
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=2

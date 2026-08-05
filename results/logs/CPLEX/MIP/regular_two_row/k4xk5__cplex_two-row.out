@@ -1,0 +1,6 @@
+[INFO] Loaded graph from k4xk5.mtx: n=20, m=70
+[INFO] grid mode = two-row, grid = 2x10 = 20 cells
+ILP_RESULT: beta=6 status=OPTIMAL
+METRIC: ilp_solve_time_s=14.350
+METRIC: ilp_status=OPTIMAL
+METRIC: ilp_best_obj=6

@@ -1,0 +1,6 @@
+[INFO] Loaded graph from gent113.mtx: n=113, m=655
+[INFO] grid mode = nxn, grid = 113x113 = 12769 cells
+CP_RESULT: beta=6 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=6

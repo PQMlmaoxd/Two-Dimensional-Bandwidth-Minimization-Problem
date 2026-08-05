@@ -1,0 +1,6 @@
+[INFO] Loaded graph from impcol_b.mtx: n=59, m=312
+[INFO] grid mode = sqrt, eta = 8, grid = 8x8 = 64 cells
+CP_RESULT: beta=5 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=5

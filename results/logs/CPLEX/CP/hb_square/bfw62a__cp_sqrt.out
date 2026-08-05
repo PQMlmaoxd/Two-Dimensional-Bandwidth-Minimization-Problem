@@ -1,0 +1,6 @@
+[INFO] Loaded graph from bfw62a.mtx: n=62, m=450
+[INFO] grid mode = sqrt, eta = 8, grid = 8x8 = 64 cells
+CP_RESULT: beta=4 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=4

@@ -1,0 +1,6 @@
+[INFO] Loaded graph from lop163.mtx: n=163, m=935
+[INFO] grid mode = sqrt, eta = 13, grid = 13x13 = 169 cells
+ILP_RESULT: beta=6 status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=6

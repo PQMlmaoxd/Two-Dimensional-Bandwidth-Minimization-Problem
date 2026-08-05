@@ -1,0 +1,6 @@
+[INFO] Loaded graph from cyclePow15-2.mtx: n=15, m=30
+[INFO] grid mode = nxn, grid = 15x15 = 225 cells
+CP_RESULT: beta=2 status=OPTIMAL
+METRIC: cp_solve_time_s=1.400
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=2

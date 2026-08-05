@@ -1,0 +1,180 @@
+{
+  "bounds": {
+    "certified_lower": null,
+    "final_verified": 4,
+    "optimal": null
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/Harwell Boeing set/ibm32.mtx",
+    "graph_edges": 90,
+    "graph_interpretation": "matrix-coordinate-as-edge-v1",
+    "matrix": {
+      "cols": 32,
+      "declared_entries": 126,
+      "field": "pattern",
+      "rows": 32,
+      "symmetry": "general"
+    },
+    "sha256": "5c84155b323f68cb42dd8aad8dba8bb946362aa29384c00137a180a671f91568",
+    "vertices": 32
+  },
+  "method": {
+    "grid": {
+      "cols": 6,
+      "policy": "ceil-sqrt-square",
+      "rows": 6
+    },
+    "id": "naive-amo",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/comparision/incremental_bandwidth_solver_cutoff_symmetry_naive_amo_nodrsa.py"
+  },
+  "outcome": {
+    "elapsed_s": 3600.0,
+    "status": "TIMEOUT_FEASIBLE",
+    "termination": "wall_timeout",
+    "termination_k": null,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "legacy_artifact": "Harwell Boeing naive amo/ibm32__naive_amo_verify.txt",
+    "source_reported_k": 4,
+    "source_reported_k_verified": true,
+    "status_source": "logs/runlim_benchmark_naive_amo.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 4,
+    "constraint_k": 4,
+    "positions": {
+      "1": [
+        4,
+        2
+      ],
+      "10": [
+        5,
+        4
+      ],
+      "11": [
+        6,
+        5
+      ],
+      "12": [
+        4,
+        4
+      ],
+      "13": [
+        2,
+        5
+      ],
+      "14": [
+        1,
+        3
+      ],
+      "15": [
+        5,
+        6
+      ],
+      "16": [
+        4,
+        3
+      ],
+      "17": [
+        1,
+        2
+      ],
+      "18": [
+        6,
+        2
+      ],
+      "19": [
+        2,
+        1
+      ],
+      "2": [
+        4,
+        5
+      ],
+      "20": [
+        6,
+        4
+      ],
+      "21": [
+        3,
+        6
+      ],
+      "22": [
+        6,
+        3
+      ],
+      "23": [
+        2,
+        4
+      ],
+      "24": [
+        1,
+        5
+      ],
+      "25": [
+        5,
+        5
+      ],
+      "26": [
+        3,
+        3
+      ],
+      "27": [
+        2,
+        3
+      ],
+      "28": [
+        2,
+        6
+      ],
+      "29": [
+        5,
+        3
+      ],
+      "3": [
+        3,
+        2
+      ],
+      "30": [
+        3,
+        1
+      ],
+      "31": [
+        1,
+        6
+      ],
+      "32": [
+        4,
+        6
+      ],
+      "4": [
+        2,
+        2
+      ],
+      "5": [
+        3,
+        5
+      ],
+      "6": [
+        5,
+        1
+      ],
+      "7": [
+        3,
+        4
+      ],
+      "8": [
+        5,
+        2
+      ],
+      "9": [
+        1,
+        4
+      ]
+    },
+    "valid": true
+  }
+}

@@ -1,0 +1,6 @@
+[INFO] Loaded graph from pores_1.mtx: n=30, m=180
+[INFO] grid mode = nxn, grid = 30x30 = 900 cells
+CP_RESULT: beta=3 status=OPTIMAL
+METRIC: cp_solve_time_s=131.120
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=3

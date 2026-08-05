@@ -1,0 +1,6 @@
+[INFO] Loaded graph from bcspwr03.mtx: n=118, m=297
+[INFO] grid mode = nxn, grid = 118x118 = 13924 cells
+CP_RESULT: beta=2 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=2

@@ -1,0 +1,92 @@
+{
+  "bounds": {
+    "certified_lower": 1,
+    "final_verified": 1,
+    "optimal": 1
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/regular set/path10.mtx",
+    "graph_edges": 9,
+    "graph_interpretation": "legacy-edge-list-v1",
+    "matrix": {
+      "cols": 10,
+      "declared_entries": 9,
+      "field": "pattern",
+      "rows": 10,
+      "symmetry": "undirected-edge-list"
+    },
+    "sha256": "dfb9571b01c69d25b4ced7c28cfa3a2cc6499c0c2eabe0b333033c3f5a03272e",
+    "vertices": 10
+  },
+  "method": {
+    "grid": {
+      "cols": 4,
+      "policy": "ceil-sqrt-square",
+      "rows": 4
+    },
+    "id": "no-symmetry",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/comparision/incremental_bandwidth_solver_cutoff_no_symmetry_nodrsa.py"
+  },
+  "outcome": {
+    "elapsed_s": 1.34,
+    "status": "OPTIMAL_BY_BOUND",
+    "termination": "minimum_positive_bandwidth",
+    "termination_k": 1,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "legacy_artifact": "regular no symmetry/path10__no_symmetry_verify.txt",
+    "source_reported_k": 1,
+    "source_reported_k_verified": true,
+    "status_source": "logs/runlim_benchmark_regular_no_symmetry.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 1,
+    "constraint_k": 1,
+    "positions": {
+      "1": [
+        3,
+        2
+      ],
+      "10": [
+        4,
+        2
+      ],
+      "2": [
+        1,
+        4
+      ],
+      "3": [
+        1,
+        2
+      ],
+      "4": [
+        2,
+        2
+      ],
+      "5": [
+        1,
+        3
+      ],
+      "6": [
+        2,
+        4
+      ],
+      "7": [
+        3,
+        4
+      ],
+      "8": [
+        4,
+        4
+      ],
+      "9": [
+        4,
+        3
+      ]
+    },
+    "valid": true
+  }
+}

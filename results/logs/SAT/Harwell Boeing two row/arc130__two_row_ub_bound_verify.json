@@ -1,0 +1,45 @@
+{
+  "bounds": {
+    "certified_lower": null,
+    "final_verified": null,
+    "initial_upper_bound": 32,
+    "optimal": null
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/Harwell Boeing set/arc130.mtx",
+    "graph_edges": 683,
+    "graph_interpretation": "square-adjacency-v1",
+    "matrix": {
+      "cols": 130,
+      "declared_entries": 1282,
+      "field": "real",
+      "rows": 130,
+      "symmetry": "general"
+    },
+    "sha256": "c04d50cb2b1e29b0cac38e90437ec005376c07cee07a31804d6a7e2f6ab9705c",
+    "vertices": 130
+  },
+  "method": {
+    "grid": {
+      "cols": 65,
+      "policy": "two-row",
+      "rows": 2
+    },
+    "id": "two-row-cutoff",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/incremental_bandwidth_solver_two_row.py"
+  },
+  "outcome": {
+    "elapsed_s": 3600.0,
+    "status": "TIMEOUT_NO_WITNESS",
+    "termination": "wall_timeout",
+    "termination_k": null,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "roster": "submit_src_code/results/experiment/two_row_UB_bound/roster.csv",
+    "source_artifact": "temp/lin_probe_2ub/results/arc130.json"
+  },
+  "schema": "2dbmp-no-witness-v1",
+  "witness": null
+}

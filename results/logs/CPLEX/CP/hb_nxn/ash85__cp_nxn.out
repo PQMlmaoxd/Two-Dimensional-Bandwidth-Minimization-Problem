@@ -1,0 +1,6 @@
+[INFO] Loaded graph from ash85.mtx: n=85, m=304
+[INFO] grid mode = nxn, grid = 85x85 = 7225 cells
+CP_RESULT: beta=2 status=OPTIMAL
+METRIC: cp_solve_time_s=205.000
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=2

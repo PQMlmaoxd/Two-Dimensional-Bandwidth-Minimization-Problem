@@ -1,0 +1,6 @@
+[INFO] Loaded graph from plat362: n=362, m=3074
+[INFO] grid mode = sqrt, eta = 20, grid = 20x20 = 400 cells
+CP_RESULT: beta=9 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=9

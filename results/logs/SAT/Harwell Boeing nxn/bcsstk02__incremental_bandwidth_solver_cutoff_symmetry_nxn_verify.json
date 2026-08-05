@@ -1,0 +1,316 @@
+{
+  "bounds": {
+    "certified_lower": null,
+    "final_verified": 11,
+    "optimal": null
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/Harwell Boeing set/bcsstk02.mtx",
+    "graph_edges": 2145,
+    "graph_interpretation": "matrix-coordinate-as-edge-v1",
+    "matrix": {
+      "cols": 66,
+      "declared_entries": 2211,
+      "field": "real",
+      "rows": 66,
+      "symmetry": "symmetric"
+    },
+    "sha256": "20bc89a0355ebe9da3a02feafbae22370f0c9c5e6c4103559714b503885336a0",
+    "vertices": 66
+  },
+  "method": {
+    "grid": {
+      "cols": 66,
+      "policy": "n-by-n-square",
+      "rows": 66
+    },
+    "id": "nxn-pairwise",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/incremental_bandwidth_solver_cutoff_symmetry_nxn.py"
+  },
+  "outcome": {
+    "elapsed_s": 3600.0,
+    "status": "TIMEOUT_FEASIBLE",
+    "termination": "wall_timeout",
+    "termination_k": null,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "legacy_artifact": "Harwell Boeing nxn/bcsstk02__incremental_bandwidth_solver_cutoff_symmetry_nxn_verify.txt",
+    "source_reported_k": 11,
+    "source_reported_k_verified": true,
+    "status_source": "submit_src_code/results/csv_res/Harwell-Boeing grid nxn.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 11,
+    "constraint_k": 11,
+    "positions": {
+      "1": [
+        4,
+        16
+      ],
+      "10": [
+        1,
+        15
+      ],
+      "11": [
+        5,
+        9
+      ],
+      "12": [
+        2,
+        15
+      ],
+      "13": [
+        6,
+        16
+      ],
+      "14": [
+        4,
+        14
+      ],
+      "15": [
+        4,
+        17
+      ],
+      "16": [
+        2,
+        10
+      ],
+      "17": [
+        3,
+        10
+      ],
+      "18": [
+        5,
+        11
+      ],
+      "19": [
+        4,
+        13
+      ],
+      "2": [
+        5,
+        14
+      ],
+      "20": [
+        7,
+        13
+      ],
+      "21": [
+        7,
+        14
+      ],
+      "22": [
+        10,
+        13
+      ],
+      "23": [
+        3,
+        16
+      ],
+      "24": [
+        9,
+        13
+      ],
+      "25": [
+        7,
+        15
+      ],
+      "26": [
+        5,
+        12
+      ],
+      "27": [
+        7,
+        10
+      ],
+      "28": [
+        3,
+        14
+      ],
+      "29": [
+        4,
+        18
+      ],
+      "3": [
+        2,
+        16
+      ],
+      "30": [
+        3,
+        13
+      ],
+      "31": [
+        6,
+        13
+      ],
+      "32": [
+        8,
+        13
+      ],
+      "33": [
+        5,
+        15
+      ],
+      "34": [
+        3,
+        15
+      ],
+      "35": [
+        8,
+        11
+      ],
+      "36": [
+        2,
+        11
+      ],
+      "37": [
+        9,
+        12
+      ],
+      "38": [
+        5,
+        17
+      ],
+      "39": [
+        3,
+        12
+      ],
+      "4": [
+        6,
+        9
+      ],
+      "40": [
+        4,
+        12
+      ],
+      "41": [
+        8,
+        12
+      ],
+      "42": [
+        5,
+        8
+      ],
+      "43": [
+        6,
+        10
+      ],
+      "44": [
+        1,
+        14
+      ],
+      "45": [
+        3,
+        9
+      ],
+      "46": [
+        1,
+        13
+      ],
+      "47": [
+        2,
+        13
+      ],
+      "48": [
+        8,
+        15
+      ],
+      "49": [
+        7,
+        12
+      ],
+      "5": [
+        9,
+        14
+      ],
+      "50": [
+        4,
+        10
+      ],
+      "51": [
+        5,
+        18
+      ],
+      "52": [
+        6,
+        11
+      ],
+      "53": [
+        2,
+        12
+      ],
+      "54": [
+        5,
+        10
+      ],
+      "55": [
+        6,
+        15
+      ],
+      "56": [
+        6,
+        12
+      ],
+      "57": [
+        5,
+        13
+      ],
+      "58": [
+        3,
+        11
+      ],
+      "59": [
+        6,
+        17
+      ],
+      "6": [
+        4,
+        8
+      ],
+      "60": [
+        7,
+        11
+      ],
+      "61": [
+        4,
+        9
+      ],
+      "62": [
+        4,
+        11
+      ],
+      "63": [
+        5,
+        16
+      ],
+      "64": [
+        2,
+        14
+      ],
+      "65": [
+        6,
+        14
+      ],
+      "66": [
+        8,
+        14
+      ],
+      "7": [
+        3,
+        17
+      ],
+      "8": [
+        1,
+        12
+      ],
+      "9": [
+        1,
+        11
+      ]
+    },
+    "valid": true
+  }
+}

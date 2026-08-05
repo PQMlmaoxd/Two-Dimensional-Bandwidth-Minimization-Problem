@@ -1,0 +1,6 @@
+[INFO] Loaded graph from will57.mtx: n=57, m=281
+[INFO] grid mode = sqrt, eta = 8, grid = 8x8 = 64 cells
+CP_RESULT: beta=3 status=OPTIMAL
+METRIC: cp_solve_time_s=83.750
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=3

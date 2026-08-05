@@ -1,0 +1,6 @@
+[INFO] Loaded graph from cyclePow10-10.mtx: n=10, m=45
+[INFO] grid mode = two-row, grid = 2x5 = 10 cells
+ILP_RESULT: beta=5 status=OPTIMAL
+METRIC: ilp_solve_time_s=7.350
+METRIC: ilp_status=OPTIMAL
+METRIC: ilp_best_obj=5

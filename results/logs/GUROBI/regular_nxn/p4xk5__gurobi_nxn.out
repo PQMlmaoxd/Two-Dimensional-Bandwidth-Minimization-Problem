@@ -1,0 +1,6 @@
+[INFO] Loaded graph from p4xk5.mtx: n=20, m=55
+[INFO] grid mode = nxn, grid = 20x20 = 400 cells
+ILP_RESULT: beta=3 status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=3

@@ -1,0 +1,6 @@
+[INFO] Loaded graph from mcca.mtx: n=180, m=2659
+[INFO] grid mode = sqrt, eta = 14, grid = 14x14 = 196 cells
+ILP_RESULT: beta=13 status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=13

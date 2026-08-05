@@ -1,0 +1,6 @@
+[INFO] Loaded graph from cycle20.mtx: n=20, m=20
+[INFO] grid mode = sqrt, eta = 5, grid = 5x5 = 25 cells
+CP_RESULT: beta=1 status=OPTIMAL
+METRIC: cp_solve_time_s=1.210
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=1

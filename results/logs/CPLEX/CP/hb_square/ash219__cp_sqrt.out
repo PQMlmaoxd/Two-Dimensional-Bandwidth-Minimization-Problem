@@ -1,0 +1,6 @@
+[INFO] Loaded graph from ash219.mtx: n=219, m=438
+[INFO] grid mode = sqrt, eta = 15, grid = 15x15 = 225 cells
+CP_RESULT: beta=9 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=9

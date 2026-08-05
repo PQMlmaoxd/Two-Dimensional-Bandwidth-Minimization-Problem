@@ -1,0 +1,6 @@
+[INFO] Loaded graph from wheel15.mtx: n=15, m=28
+[INFO] grid mode = sqrt, eta = 4, grid = 4x4 = 16 cells
+ILP_RESULT: beta=3 status=OPTIMAL
+METRIC: ilp_solve_time_s=0.100
+METRIC: ilp_status=OPTIMAL
+METRIC: ilp_best_obj=3

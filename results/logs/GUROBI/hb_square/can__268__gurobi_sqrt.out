@@ -1,0 +1,6 @@
+[INFO] Loaded graph from can__268.mtx: n=268, m=1675
+[INFO] grid mode = sqrt, eta = 17, grid = 17x17 = 289 cells
+ILP_RESULT: beta=17 status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=17

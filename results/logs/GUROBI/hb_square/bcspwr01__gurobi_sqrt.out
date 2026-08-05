@@ -1,0 +1,6 @@
+[INFO] Loaded graph from bcspwr01.mtx: n=39, m=85
+[INFO] grid mode = sqrt, eta = 7, grid = 7x7 = 49 cells
+ILP_RESULT: beta=2 status=OPTIMAL
+METRIC: ilp_solve_time_s=13.830
+METRIC: ilp_status=OPTIMAL
+METRIC: ilp_best_obj=2

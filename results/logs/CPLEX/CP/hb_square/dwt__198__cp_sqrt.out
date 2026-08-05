@@ -1,0 +1,6 @@
+[INFO] Loaded graph from dwt__198.mtx: n=198, m=795
+[INFO] grid mode = sqrt, eta = 15, grid = 15x15 = 225 cells
+CP_RESULT: beta=4 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=4

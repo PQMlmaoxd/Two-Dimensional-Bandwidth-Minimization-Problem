@@ -1,0 +1,90 @@
+{
+  "bounds": {
+    "certified_lower": 5,
+    "final_verified": 5,
+    "optimal": 5
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/Harwell Boeing set/rgg010.mtx",
+    "graph_edges": 45,
+    "graph_interpretation": "square-adjacency-v1",
+    "matrix": {
+      "cols": 10,
+      "declared_entries": 76,
+      "field": "pattern",
+      "rows": 10,
+      "symmetry": "general"
+    },
+    "sha256": "4bbb383651ffca1c294c1bca6575fbc9225f61f4b4c1345ad23087518553fe56",
+    "vertices": 10
+  },
+  "method": {
+    "grid": {
+      "cols": 5,
+      "policy": "two-row",
+      "rows": 2
+    },
+    "id": "two-row-cutoff",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/incremental_bandwidth_solver_two_row.py"
+  },
+  "outcome": {
+    "elapsed_s": 0.08,
+    "status": "OPTIMAL_BY_UNSAT",
+    "termination": "unsat_below_verified_incumbent",
+    "termination_k": 4,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "roster": "submit_src_code/results/experiment/two_row_UB_bound/roster.csv",
+    "source_artifact": "temp/lin_probe_1.5ub/results/rgg010.json"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 5,
+    "constraint_k": 5,
+    "positions": {
+      "1": [
+        1,
+        3
+      ],
+      "10": [
+        2,
+        5
+      ],
+      "2": [
+        1,
+        1
+      ],
+      "3": [
+        2,
+        3
+      ],
+      "4": [
+        1,
+        4
+      ],
+      "5": [
+        2,
+        1
+      ],
+      "6": [
+        2,
+        4
+      ],
+      "7": [
+        1,
+        5
+      ],
+      "8": [
+        2,
+        2
+      ],
+      "9": [
+        1,
+        2
+      ]
+    },
+    "valid": true
+  }
+}

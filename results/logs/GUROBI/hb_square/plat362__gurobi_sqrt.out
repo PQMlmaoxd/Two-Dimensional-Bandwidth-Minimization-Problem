@@ -1,0 +1,6 @@
+[INFO] Loaded graph from plat362: n=362, m=3074
+[INFO] grid mode = sqrt, eta = 20, grid = 20x20 = 400 cells
+ILP_RESULT: beta=26 status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=26

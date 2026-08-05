@@ -1,0 +1,6 @@
+[INFO] Loaded graph from ck104.mtx: n=104, m=992
+[INFO] grid mode = nxn, grid = 104x104 = 10816 cells
+ILP_RESULT: status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=-1

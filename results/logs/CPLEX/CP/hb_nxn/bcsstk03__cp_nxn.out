@@ -1,0 +1,6 @@
+[INFO] Loaded graph from bcsstk03.mtx: n=112, m=376
+[INFO] grid mode = nxn, grid = 112x112 = 12544 cells
+CP_RESULT: beta=2 status=OPTIMAL
+METRIC: cp_solve_time_s=244.310
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=2

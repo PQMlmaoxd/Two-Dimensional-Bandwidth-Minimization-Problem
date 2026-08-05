@@ -1,0 +1,6 @@
+[INFO] Loaded graph from bcsstk01.mtx: n=48, m=224
+[INFO] grid mode = nxn, grid = 48x48 = 2304 cells
+CP_RESULT: beta=4 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=4

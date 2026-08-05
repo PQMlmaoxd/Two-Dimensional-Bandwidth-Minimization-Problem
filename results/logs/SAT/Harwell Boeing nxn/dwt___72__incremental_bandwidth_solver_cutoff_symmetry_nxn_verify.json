@@ -1,0 +1,340 @@
+{
+  "bounds": {
+    "certified_lower": 1,
+    "final_verified": 1,
+    "optimal": 1
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/Harwell Boeing set/dwt___72.mtx",
+    "graph_edges": 75,
+    "graph_interpretation": "matrix-coordinate-as-edge-v1",
+    "matrix": {
+      "cols": 72,
+      "declared_entries": 147,
+      "field": "pattern",
+      "rows": 72,
+      "symmetry": "symmetric"
+    },
+    "sha256": "b663e91b54cfcdaf292abd96a31eb78f17dbbac6d8877574dc2a6b1a3ac2ee0f",
+    "vertices": 72
+  },
+  "method": {
+    "grid": {
+      "cols": 72,
+      "policy": "n-by-n-square",
+      "rows": 72
+    },
+    "id": "nxn-pairwise",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/incremental_bandwidth_solver_cutoff_symmetry_nxn.py"
+  },
+  "outcome": {
+    "elapsed_s": 24.21,
+    "status": "OPTIMAL_BY_BOUND",
+    "termination": "minimum_positive_bandwidth",
+    "termination_k": 1,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "legacy_artifact": "Harwell Boeing nxn/dwt___72__incremental_bandwidth_solver_cutoff_symmetry_nxn_verify.txt",
+    "source_reported_k": 1,
+    "source_reported_k_verified": true,
+    "status_source": "submit_src_code/results/csv_res/Harwell-Boeing grid nxn.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 1,
+    "constraint_k": 1,
+    "positions": {
+      "1": [
+        21,
+        7
+      ],
+      "10": [
+        21,
+        8
+      ],
+      "11": [
+        22,
+        8
+      ],
+      "12": [
+        22,
+        9
+      ],
+      "13": [
+        16,
+        8
+      ],
+      "14": [
+        22,
+        10
+      ],
+      "15": [
+        13,
+        9
+      ],
+      "16": [
+        14,
+        9
+      ],
+      "17": [
+        14,
+        8
+      ],
+      "18": [
+        15,
+        8
+      ],
+      "19": [
+        15,
+        9
+      ],
+      "2": [
+        20,
+        7
+      ],
+      "20": [
+        16,
+        9
+      ],
+      "21": [
+        17,
+        9
+      ],
+      "22": [
+        18,
+        9
+      ],
+      "23": [
+        19,
+        9
+      ],
+      "24": [
+        20,
+        9
+      ],
+      "25": [
+        21,
+        9
+      ],
+      "26": [
+        21,
+        10
+      ],
+      "27": [
+        16,
+        10
+      ],
+      "28": [
+        20,
+        10
+      ],
+      "29": [
+        14,
+        12
+      ],
+      "3": [
+        19,
+        7
+      ],
+      "30": [
+        13,
+        12
+      ],
+      "31": [
+        13,
+        11
+      ],
+      "32": [
+        14,
+        11
+      ],
+      "33": [
+        15,
+        11
+      ],
+      "34": [
+        16,
+        11
+      ],
+      "35": [
+        17,
+        11
+      ],
+      "36": [
+        18,
+        11
+      ],
+      "37": [
+        18,
+        10
+      ],
+      "38": [
+        19,
+        10
+      ],
+      "39": [
+        19,
+        11
+      ],
+      "4": [
+        18,
+        7
+      ],
+      "40": [
+        20,
+        11
+      ],
+      "41": [
+        16,
+        12
+      ],
+      "42": [
+        20,
+        12
+      ],
+      "43": [
+        12,
+        12
+      ],
+      "44": [
+        12,
+        13
+      ],
+      "45": [
+        13,
+        13
+      ],
+      "46": [
+        14,
+        13
+      ],
+      "47": [
+        15,
+        13
+      ],
+      "48": [
+        16,
+        13
+      ],
+      "49": [
+        17,
+        13
+      ],
+      "5": [
+        17,
+        7
+      ],
+      "50": [
+        18,
+        13
+      ],
+      "51": [
+        18,
+        12
+      ],
+      "52": [
+        19,
+        12
+      ],
+      "53": [
+        19,
+        13
+      ],
+      "54": [
+        20,
+        13
+      ],
+      "55": [
+        16,
+        14
+      ],
+      "56": [
+        21,
+        13
+      ],
+      "57": [
+        16,
+        18
+      ],
+      "58": [
+        16,
+        17
+      ],
+      "59": [
+        15,
+        17
+      ],
+      "6": [
+        17,
+        8
+      ],
+      "60": [
+        15,
+        16
+      ],
+      "61": [
+        15,
+        15
+      ],
+      "62": [
+        16,
+        15
+      ],
+      "63": [
+        17,
+        15
+      ],
+      "64": [
+        18,
+        15
+      ],
+      "65": [
+        19,
+        15
+      ],
+      "66": [
+        20,
+        15
+      ],
+      "67": [
+        21,
+        15
+      ],
+      "68": [
+        21,
+        14
+      ],
+      "69": [
+        16,
+        16
+      ],
+      "7": [
+        18,
+        8
+      ],
+      "70": [
+        22,
+        14
+      ],
+      "71": [
+        17,
+        16
+      ],
+      "72": [
+        23,
+        14
+      ],
+      "8": [
+        19,
+        8
+      ],
+      "9": [
+        20,
+        8
+      ]
+    },
+    "valid": true
+  }
+}

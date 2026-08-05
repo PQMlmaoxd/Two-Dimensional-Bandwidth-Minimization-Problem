@@ -1,0 +1,6 @@
+[INFO] Loaded graph from path20.mtx: n=20, m=19
+[INFO] grid mode = sqrt, eta = 5, grid = 5x5 = 25 cells
+ILP_RESULT: beta=1 status=OPTIMAL
+METRIC: ilp_solve_time_s=1.220
+METRIC: ilp_status=OPTIMAL
+METRIC: ilp_best_obj=1

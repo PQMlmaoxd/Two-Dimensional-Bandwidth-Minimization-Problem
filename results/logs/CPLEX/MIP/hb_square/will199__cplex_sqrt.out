@@ -1,0 +1,6 @@
+[INFO] Loaded graph from will199.mtx: n=199, m=701
+[INFO] grid mode = sqrt, eta = 15, grid = 15x15 = 225 cells
+ILP_RESULT: beta=17 status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=17

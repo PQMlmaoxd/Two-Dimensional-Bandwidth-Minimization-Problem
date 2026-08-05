@@ -1,0 +1,140 @@
+{
+  "bounds": {
+    "certified_lower": 5,
+    "final_verified": 6,
+    "initial_upper_bound": 6,
+    "optimal": null
+  },
+  "instance": {
+    "file": "dataset/regular set/k4xk5.mtx",
+    "graph_edges": 70,
+    "graph_interpretation": "legacy-edge-list-v1",
+    "matrix": {
+      "cols": 20,
+      "declared_entries": 70,
+      "field": "pattern",
+      "rows": 20,
+      "symmetry": "undirected-edge-list"
+    },
+    "sha256": "0a08a9c4f033f249d598aa842d7bd0ded167eec89840fc6aef8c253ceb0e4ace",
+    "vertices": 20
+  },
+  "method": {
+    "grid": {
+      "cols": 10,
+      "policy": "two-row",
+      "rows": 2
+    },
+    "id": "two-row-lin-probe",
+    "solver": "cadical195",
+    "solver_script": "temp/runlim_two_row_lin_probe.py"
+  },
+  "outcome": {
+    "elapsed_s": 3601.08,
+    "status": "TIMEOUT_FEASIBLE",
+    "termination": "wall_timeout",
+    "termination_k": null,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "last_tested_k": 6,
+    "lin_multiplier": 1.0,
+    "lin_ub": 6,
+    "requested_start_k": 6,
+    "source_incumbent_k": 6,
+    "source_lower_bound": 5,
+    "source_reported_k": 6,
+    "source_status": "TO",
+    "source_termination_reason": "wall_timeout",
+    "source_witness": "lin_probe_regular/verification/k4xk5.txt",
+    "summary": "lin_probe_regular/lin_probe_summary.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 6,
+    "constraint_k": 6,
+    "positions": {
+      "1": [
+        1,
+        5
+      ],
+      "10": [
+        1,
+        6
+      ],
+      "11": [
+        1,
+        7
+      ],
+      "12": [
+        1,
+        3
+      ],
+      "13": [
+        2,
+        4
+      ],
+      "14": [
+        1,
+        2
+      ],
+      "15": [
+        2,
+        6
+      ],
+      "16": [
+        1,
+        1
+      ],
+      "17": [
+        2,
+        2
+      ],
+      "18": [
+        2,
+        9
+      ],
+      "19": [
+        2,
+        7
+      ],
+      "2": [
+        2,
+        3
+      ],
+      "20": [
+        2,
+        1
+      ],
+      "3": [
+        2,
+        10
+      ],
+      "4": [
+        2,
+        8
+      ],
+      "5": [
+        1,
+        4
+      ],
+      "6": [
+        1,
+        10
+      ],
+      "7": [
+        1,
+        8
+      ],
+      "8": [
+        2,
+        5
+      ],
+      "9": [
+        1,
+        9
+      ]
+    },
+    "valid": true
+  }
+}

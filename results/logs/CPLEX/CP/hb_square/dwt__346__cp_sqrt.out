@@ -1,0 +1,6 @@
+[INFO] Loaded graph from dwt__346: n=346, m=1786
+[INFO] grid mode = sqrt, eta = 19, grid = 19x19 = 361 cells
+CP_RESULT: beta=8 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=8

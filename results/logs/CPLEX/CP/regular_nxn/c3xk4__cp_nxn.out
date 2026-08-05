@@ -1,0 +1,6 @@
+[INFO] Loaded graph from c3xk4.mtx: n=12, m=30
+[INFO] grid mode = nxn, grid = 12x12 = 144 cells
+CP_RESULT: beta=3 status=OPTIMAL
+METRIC: cp_solve_time_s=33.750
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=3

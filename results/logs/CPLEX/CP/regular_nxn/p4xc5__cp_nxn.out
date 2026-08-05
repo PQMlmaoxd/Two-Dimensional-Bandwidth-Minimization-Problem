@@ -1,0 +1,6 @@
+[INFO] Loaded graph from p4xc5.mtx: n=20, m=35
+[INFO] grid mode = nxn, grid = 20x20 = 400 cells
+CP_RESULT: beta=2 status=OPTIMAL
+METRIC: cp_solve_time_s=2.560
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=2

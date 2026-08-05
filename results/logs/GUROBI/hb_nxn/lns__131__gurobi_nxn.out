@@ -1,0 +1,6 @@
+[INFO] Loaded graph from lns__131.mtx: n=131, m=536
+[INFO] grid mode = nxn, grid = 131x131 = 17161 cells
+ILP_RESULT: status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=-1

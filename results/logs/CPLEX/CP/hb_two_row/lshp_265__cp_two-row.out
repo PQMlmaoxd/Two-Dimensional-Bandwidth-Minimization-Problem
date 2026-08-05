@@ -1,0 +1,6 @@
+[INFO] Loaded graph from lshp_265.mtx: n=265, m=3600
+[INFO] grid mode = two-row, grid = 2x133 = 266 cells
+CP_RESULT: beta=21 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=21

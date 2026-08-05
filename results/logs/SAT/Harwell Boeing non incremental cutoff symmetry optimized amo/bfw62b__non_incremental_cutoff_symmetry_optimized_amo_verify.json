@@ -1,0 +1,300 @@
+{
+  "bounds": {
+    "certified_lower": 3,
+    "final_verified": 3,
+    "optimal": 3
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/Harwell Boeing set/bfw62b.mtx",
+    "graph_edges": 140,
+    "graph_interpretation": "matrix-coordinate-as-edge-v1",
+    "matrix": {
+      "cols": 62,
+      "declared_entries": 342,
+      "field": "real",
+      "rows": 62,
+      "symmetry": "general"
+    },
+    "sha256": "186bdc7910048b908c3110a99dc43d8359d17e88e46c9f58c47fed769cbef613",
+    "vertices": 62
+  },
+  "method": {
+    "grid": {
+      "cols": 8,
+      "policy": "ceil-sqrt-square",
+      "rows": 8
+    },
+    "id": "non-incremental-cutoff-symmetry-optimized-amo",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/comparision/non_incremental_bandwidth_solver_cutoff_symmetry_nodrsa.py"
+  },
+  "outcome": {
+    "elapsed_s": 11.13,
+    "status": "OPTIMAL_BY_UNSAT",
+    "termination": "unsat_below_verified_incumbent",
+    "termination_k": 2,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "legacy_artifact": "Harwell Boeing non incremental cutoff symmetry optimized amo/bfw62b__non_incremental_cutoff_symmetry_optimized_amo_verify.txt",
+    "source_reported_k": 3,
+    "source_reported_k_verified": true,
+    "status_source": "logs/runlim_benchmark_non_incremental_cutoff_symmetry_optimized_amo.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 3,
+    "constraint_k": 3,
+    "positions": {
+      "1": [
+        1,
+        7
+      ],
+      "10": [
+        6,
+        2
+      ],
+      "11": [
+        4,
+        1
+      ],
+      "12": [
+        7,
+        6
+      ],
+      "13": [
+        2,
+        1
+      ],
+      "14": [
+        8,
+        6
+      ],
+      "15": [
+        6,
+        5
+      ],
+      "16": [
+        4,
+        6
+      ],
+      "17": [
+        1,
+        6
+      ],
+      "18": [
+        1,
+        4
+      ],
+      "19": [
+        6,
+        6
+      ],
+      "2": [
+        5,
+        6
+      ],
+      "20": [
+        1,
+        8
+      ],
+      "21": [
+        3,
+        6
+      ],
+      "22": [
+        2,
+        6
+      ],
+      "23": [
+        1,
+        5
+      ],
+      "24": [
+        4,
+        7
+      ],
+      "25": [
+        2,
+        8
+      ],
+      "26": [
+        2,
+        3
+      ],
+      "27": [
+        6,
+        8
+      ],
+      "28": [
+        3,
+        5
+      ],
+      "29": [
+        6,
+        4
+      ],
+      "3": [
+        5,
+        5
+      ],
+      "30": [
+        4,
+        5
+      ],
+      "31": [
+        3,
+        8
+      ],
+      "32": [
+        5,
+        3
+      ],
+      "33": [
+        3,
+        7
+      ],
+      "34": [
+        4,
+        4
+      ],
+      "35": [
+        5,
+        8
+      ],
+      "36": [
+        2,
+        5
+      ],
+      "37": [
+        4,
+        8
+      ],
+      "38": [
+        3,
+        3
+      ],
+      "39": [
+        7,
+        8
+      ],
+      "4": [
+        2,
+        7
+      ],
+      "40": [
+        2,
+        4
+      ],
+      "41": [
+        7,
+        3
+      ],
+      "42": [
+        5,
+        2
+      ],
+      "43": [
+        6,
+        7
+      ],
+      "44": [
+        6,
+        3
+      ],
+      "45": [
+        8,
+        7
+      ],
+      "46": [
+        4,
+        2
+      ],
+      "47": [
+        8,
+        8
+      ],
+      "48": [
+        3,
+        2
+      ],
+      "49": [
+        7,
+        7
+      ],
+      "5": [
+        3,
+        4
+      ],
+      "50": [
+        3,
+        1
+      ],
+      "51": [
+        8,
+        5
+      ],
+      "52": [
+        1,
+        1
+      ],
+      "53": [
+        7,
+        1
+      ],
+      "54": [
+        7,
+        2
+      ],
+      "55": [
+        8,
+        4
+      ],
+      "56": [
+        7,
+        5
+      ],
+      "57": [
+        5,
+        1
+      ],
+      "58": [
+        8,
+        3
+      ],
+      "59": [
+        6,
+        1
+      ],
+      "6": [
+        5,
+        4
+      ],
+      "60": [
+        7,
+        4
+      ],
+      "61": [
+        8,
+        2
+      ],
+      "62": [
+        8,
+        1
+      ],
+      "7": [
+        4,
+        3
+      ],
+      "8": [
+        5,
+        7
+      ],
+      "9": [
+        2,
+        2
+      ]
+    },
+    "valid": true
+  }
+}

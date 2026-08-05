@@ -1,0 +1,6 @@
+[INFO] Loaded graph from fidap005.mtx: n=27, m=279
+[INFO] grid mode = sqrt, eta = 6, grid = 6x6 = 36 cells
+ILP_RESULT: beta=4 status=OPTIMAL
+METRIC: ilp_solve_time_s=675.420
+METRIC: ilp_status=OPTIMAL
+METRIC: ilp_best_obj=4

@@ -1,0 +1,6 @@
+[INFO] Loaded graph from dwt___66.mtx: n=66, m=3600
+[INFO] grid mode = two-row, grid = 2x33 = 66 cells
+CP_RESULT: beta=2 status=OPTIMAL
+METRIC: cp_solve_time_s=147.260
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=2

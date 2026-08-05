@@ -1,0 +1,6 @@
+[INFO] Loaded graph from lnsp_131.mtx: n=131, m=536
+[INFO] grid mode = sqrt, eta = 12, grid = 12x12 = 144 cells
+ILP_RESULT: beta=8 status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=8

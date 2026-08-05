@@ -1,0 +1,6 @@
+[INFO] Loaded graph from tree2x4.mtx: n=21, m=20
+[INFO] grid mode = sqrt, eta = 5, grid = 5x5 = 25 cells
+CP_RESULT: beta=2 status=OPTIMAL
+METRIC: cp_solve_time_s=1.270
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=2

@@ -1,0 +1,6 @@
+[INFO] Loaded graph from impcol_c.mtx: n=137, m=411
+[INFO] grid mode = nxn, grid = 137x137 = 18769 cells
+ILP_RESULT: status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=-1

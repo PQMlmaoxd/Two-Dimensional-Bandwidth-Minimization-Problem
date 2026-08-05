@@ -1,0 +1,6 @@
+[INFO] Loaded graph from p3xc3.mtx: n=9, m=15
+[INFO] grid mode = sqrt, eta = 3, grid = 3x3 = 9 cells
+ILP_RESULT: beta=2 status=OPTIMAL
+METRIC: ilp_solve_time_s=1.250
+METRIC: ilp_status=OPTIMAL
+METRIC: ilp_best_obj=2

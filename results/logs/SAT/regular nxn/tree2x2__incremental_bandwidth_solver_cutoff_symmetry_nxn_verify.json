@@ -1,0 +1,80 @@
+{
+  "bounds": {
+    "certified_lower": 1,
+    "final_verified": 1,
+    "optimal": 1
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/regular set/tree2x2.mtx",
+    "graph_edges": 6,
+    "graph_interpretation": "legacy-edge-list-v1",
+    "matrix": {
+      "cols": 7,
+      "declared_entries": 6,
+      "field": "pattern",
+      "rows": 7,
+      "symmetry": "undirected-edge-list"
+    },
+    "sha256": "b5dc61dd5c28fdaff68e2a932073149383f293d8b319117dabb47885a5879e0d",
+    "vertices": 7
+  },
+  "method": {
+    "grid": {
+      "cols": 7,
+      "policy": "n-by-n-square",
+      "rows": 7
+    },
+    "id": "nxn-pairwise",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/incremental_bandwidth_solver_cutoff_symmetry_nxn.py"
+  },
+  "outcome": {
+    "elapsed_s": 0.06,
+    "status": "OPTIMAL_BY_BOUND",
+    "termination": "minimum_positive_bandwidth",
+    "termination_k": 1,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "legacy_artifact": "python/benchmarks/results_python/regular_nxn/verification_out/tree2x2__incremental_bandwidth_solver_cutoff_symmetry_nxn_verify.txt",
+    "source_reported_k": 1,
+    "source_reported_k_verified": true,
+    "status_source": "python/benchmarks/results_python/regular_nxn/run_summary.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 1,
+    "constraint_k": 1,
+    "positions": {
+      "1": [
+        3,
+        1
+      ],
+      "2": [
+        5,
+        1
+      ],
+      "3": [
+        4,
+        3
+      ],
+      "4": [
+        4,
+        4
+      ],
+      "5": [
+        4,
+        1
+      ],
+      "6": [
+        4,
+        2
+      ],
+      "7": [
+        5,
+        3
+      ]
+    },
+    "valid": true
+  }
+}

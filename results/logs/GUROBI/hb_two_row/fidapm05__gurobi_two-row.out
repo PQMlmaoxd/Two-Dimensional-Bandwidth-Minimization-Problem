@@ -1,0 +1,6 @@
+[INFO] Loaded graph from fidapm05.mtx: n=42, m=3600
+[INFO] grid mode = two-row, grid = 2x21 = 42 cells
+ILP_RESULT: beta=6 status=OPTIMAL
+METRIC: ilp_solve_time_s=661.870
+METRIC: ilp_status=OPTIMAL
+METRIC: ilp_best_obj=6

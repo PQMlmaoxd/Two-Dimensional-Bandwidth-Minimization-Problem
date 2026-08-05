@@ -1,0 +1,6 @@
+[INFO] Loaded graph from will57.mtx: n=57, m=281
+[INFO] grid mode = nxn, grid = 57x57 = 3249 cells
+CP_RESULT: beta=3 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=3

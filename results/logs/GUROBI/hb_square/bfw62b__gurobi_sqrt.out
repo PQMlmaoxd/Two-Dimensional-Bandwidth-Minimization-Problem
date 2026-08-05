@@ -1,0 +1,6 @@
+[INFO] Loaded graph from bfw62b.mtx: n=62, m=342
+[INFO] grid mode = sqrt, eta = 8, grid = 8x8 = 64 cells
+ILP_RESULT: beta=3 status=OPTIMAL
+METRIC: ilp_solve_time_s=75.080
+METRIC: ilp_status=OPTIMAL
+METRIC: ilp_best_obj=3

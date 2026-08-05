@@ -1,0 +1,6 @@
+[INFO] Loaded graph from bipartite10x10.mtx: n=20, m=100
+[INFO] grid mode = two-row, grid = 2x10 = 20 cells
+ILP_RESULT: beta=8 status=OPTIMAL
+METRIC: ilp_solve_time_s=0.080
+METRIC: ilp_status=OPTIMAL
+METRIC: ilp_best_obj=8

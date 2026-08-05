@@ -1,0 +1,6 @@
+[INFO] Loaded graph from jgl011.mtx: n=11, m=76
+[INFO] grid mode = sqrt, eta = 4, grid = 4x4 = 16 cells
+CP_RESULT: beta=4 status=OPTIMAL
+METRIC: cp_solve_time_s=8.120
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=4

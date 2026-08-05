@@ -1,0 +1,92 @@
+{
+  "bounds": {
+    "certified_lower": 2,
+    "final_verified": 2,
+    "optimal": 2
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/regular set/petersen.mtx",
+    "graph_edges": 15,
+    "graph_interpretation": "legacy-edge-list-v1",
+    "matrix": {
+      "cols": 10,
+      "declared_entries": 15,
+      "field": "pattern",
+      "rows": 10,
+      "symmetry": "undirected-edge-list"
+    },
+    "sha256": "915209fd6476e83dadc5de2583b0a083700e3f93dbe6806bb928b90eb7f2c982",
+    "vertices": 10
+  },
+  "method": {
+    "grid": {
+      "cols": 10,
+      "policy": "n-by-n-square",
+      "rows": 10
+    },
+    "id": "nxn-pairwise",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/incremental_bandwidth_solver_cutoff_symmetry_nxn.py"
+  },
+  "outcome": {
+    "elapsed_s": 0.09,
+    "status": "OPTIMAL_BY_UNSAT",
+    "termination": "unsat_below_verified_incumbent",
+    "termination_k": 1,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "legacy_artifact": "python/benchmarks/results_python/regular_nxn/verification_out/petersen__incremental_bandwidth_solver_cutoff_symmetry_nxn_verify.txt",
+    "source_reported_k": 2,
+    "source_reported_k_verified": true,
+    "status_source": "python/benchmarks/results_python/regular_nxn/run_summary.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 2,
+    "constraint_k": 2,
+    "positions": {
+      "1": [
+        2,
+        2
+      ],
+      "10": [
+        2,
+        3
+      ],
+      "2": [
+        3,
+        2
+      ],
+      "3": [
+        2,
+        4
+      ],
+      "4": [
+        2,
+        1
+      ],
+      "5": [
+        3,
+        1
+      ],
+      "6": [
+        1,
+        1
+      ],
+      "7": [
+        1,
+        3
+      ],
+      "8": [
+        3,
+        3
+      ],
+      "9": [
+        1,
+        2
+      ]
+    },
+    "valid": true
+  }
+}

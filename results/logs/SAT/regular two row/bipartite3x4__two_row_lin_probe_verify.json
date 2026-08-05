@@ -1,0 +1,88 @@
+{
+  "bounds": {
+    "certified_lower": 3,
+    "final_verified": 3,
+    "initial_upper_bound": 3,
+    "optimal": 3
+  },
+  "instance": {
+    "file": "dataset/regular set/bipartite3x4.mtx",
+    "graph_edges": 12,
+    "graph_interpretation": "legacy-edge-list-v1",
+    "matrix": {
+      "cols": 7,
+      "declared_entries": 12,
+      "field": "pattern",
+      "rows": 7,
+      "symmetry": "undirected-edge-list"
+    },
+    "sha256": "00ef6e8dd0c09562779ba401daf05f63541b6c7c91d25bff41822f2b676001fa",
+    "vertices": 7
+  },
+  "method": {
+    "grid": {
+      "cols": 4,
+      "policy": "two-row",
+      "rows": 2
+    },
+    "id": "two-row-lin-probe",
+    "solver": "cadical195",
+    "solver_script": "temp/runlim_two_row_lin_probe.py"
+  },
+  "outcome": {
+    "elapsed_s": 0.06,
+    "status": "OPTIMAL_BY_UNSAT",
+    "termination": "unsat_below_verified_incumbent",
+    "termination_k": 2,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "last_tested_k": 2,
+    "lin_multiplier": 1.0,
+    "lin_ub": 3,
+    "requested_start_k": 3,
+    "source_incumbent_k": 3,
+    "source_lower_bound": 2,
+    "source_reported_k": 3,
+    "source_status": "SOLVED",
+    "source_termination_reason": "unsat_below_verified_incumbent",
+    "source_witness": "lin_probe_regular/verification/bipartite3x4.txt",
+    "summary": "lin_probe_regular/lin_probe_summary.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 3,
+    "constraint_k": 3,
+    "positions": {
+      "1": [
+        1,
+        2
+      ],
+      "2": [
+        1,
+        3
+      ],
+      "3": [
+        2,
+        1
+      ],
+      "4": [
+        1,
+        4
+      ],
+      "5": [
+        2,
+        3
+      ],
+      "6": [
+        2,
+        4
+      ],
+      "7": [
+        2,
+        2
+      ]
+    },
+    "valid": true
+  }
+}

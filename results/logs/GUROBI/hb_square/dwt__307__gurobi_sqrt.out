@@ -1,0 +1,6 @@
+[INFO] Loaded graph from dwt__307: n=307, m=1415
+[INFO] grid mode = sqrt, eta = 18, grid = 18x18 = 324 cells
+ILP_RESULT: beta=13 status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=13

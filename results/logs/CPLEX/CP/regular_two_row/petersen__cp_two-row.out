@@ -1,0 +1,6 @@
+[INFO] Loaded graph from petersen.mtx: n=10, m=15
+[INFO] grid mode = two-row, grid = 2x5 = 10 cells
+CP_RESULT: beta=3 status=OPTIMAL
+METRIC: cp_solve_time_s=1.190
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=3

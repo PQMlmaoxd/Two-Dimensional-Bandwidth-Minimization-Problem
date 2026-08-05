@@ -1,0 +1,6 @@
+[INFO] Loaded graph from steam3.mtx: n=80, m=928
+[INFO] grid mode = nxn, grid = 80x80 = 6400 cells
+CP_RESULT: beta=2 status=OPTIMAL
+METRIC: cp_solve_time_s=221.050
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=2

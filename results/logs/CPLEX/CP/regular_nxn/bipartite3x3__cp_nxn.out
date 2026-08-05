@@ -1,0 +1,6 @@
+[INFO] Loaded graph from bipartite3x3.mtx: n=6, m=9
+[INFO] grid mode = nxn, grid = 6x6 = 36 cells
+CP_RESULT: beta=2 status=OPTIMAL
+METRIC: cp_solve_time_s=1.380
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=2

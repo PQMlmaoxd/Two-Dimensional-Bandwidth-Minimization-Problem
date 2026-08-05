@@ -1,0 +1,6 @@
+[INFO] Loaded graph from lns__131.mtx: n=131, m=3600
+[INFO] grid mode = two-row, grid = 2x66 = 132 cells
+CP_RESULT: beta=12 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=12

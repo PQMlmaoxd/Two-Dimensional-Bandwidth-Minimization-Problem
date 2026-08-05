@@ -1,0 +1,6 @@
+[INFO] Loaded graph from nos1.mtx: n=237, m=627
+[INFO] grid mode = sqrt, eta = 16, grid = 16x16 = 256 cells
+ILP_RESULT: beta=15 status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=15

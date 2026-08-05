@@ -1,0 +1,6 @@
+[INFO] Loaded graph from tree2x4.mtx: n=21, m=20
+[INFO] grid mode = sqrt, eta = 5, grid = 5x5 = 25 cells
+ILP_RESULT: beta=2 status=OPTIMAL
+METRIC: ilp_solve_time_s=1.320
+METRIC: ilp_status=OPTIMAL
+METRIC: ilp_best_obj=2

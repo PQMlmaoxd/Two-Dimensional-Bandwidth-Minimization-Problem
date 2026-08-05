@@ -1,0 +1,6 @@
+[INFO] Loaded graph from can___73.mtx: n=73, m=225
+[INFO] grid mode = nxn, grid = 73x73 = 5329 cells
+CP_RESULT: beta=3 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=3

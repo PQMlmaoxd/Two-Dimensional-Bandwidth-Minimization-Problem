@@ -1,0 +1,6 @@
+[INFO] Loaded graph from mcca.mtx: n=180, m=3600
+[INFO] grid mode = two-row, grid = 2x90 = 180 cells
+CP_RESULT: status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=-1

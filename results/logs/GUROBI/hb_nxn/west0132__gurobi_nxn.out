@@ -1,0 +1,6 @@
+[INFO] Loaded graph from west0132.mtx: n=132, m=414
+[INFO] grid mode = nxn, grid = 132x132 = 17424 cells
+ILP_RESULT: status=TIMEOUT
+METRIC: ilp_solve_time_s=3600.000
+METRIC: ilp_status=TIMEOUT
+METRIC: ilp_best_obj=-1

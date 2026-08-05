@@ -1,0 +1,6 @@
+[INFO] Loaded graph from c3xk4.mtx: n=12, m=30
+[INFO] grid mode = sqrt, eta = 4, grid = 4x4 = 16 cells
+ILP_RESULT: beta=3 status=OPTIMAL
+METRIC: ilp_solve_time_s=1.360
+METRIC: ilp_status=OPTIMAL
+METRIC: ilp_best_obj=3

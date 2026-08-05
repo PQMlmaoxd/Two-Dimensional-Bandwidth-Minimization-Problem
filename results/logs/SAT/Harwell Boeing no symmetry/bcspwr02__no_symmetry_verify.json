@@ -1,0 +1,248 @@
+{
+  "bounds": {
+    "certified_lower": 2,
+    "final_verified": 2,
+    "optimal": 2
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/Harwell Boeing set/bcspwr02.mtx",
+    "graph_edges": 59,
+    "graph_interpretation": "matrix-coordinate-as-edge-v1",
+    "matrix": {
+      "cols": 49,
+      "declared_entries": 108,
+      "field": "pattern",
+      "rows": 49,
+      "symmetry": "symmetric"
+    },
+    "sha256": "25ff1095dc0561560f5d0fd40489518e1c9c380b459d1bb373d2e64ccde37265",
+    "vertices": 49
+  },
+  "method": {
+    "grid": {
+      "cols": 7,
+      "policy": "ceil-sqrt-square",
+      "rows": 7
+    },
+    "id": "no-symmetry",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/comparision/incremental_bandwidth_solver_cutoff_no_symmetry_nodrsa.py"
+  },
+  "outcome": {
+    "elapsed_s": 3.83,
+    "status": "OPTIMAL_BY_UNSAT",
+    "termination": "unsat_below_verified_incumbent",
+    "termination_k": 1,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "legacy_artifact": "Harwell Boeing no symmetry/bcspwr02__no_symmetry_verify.txt",
+    "source_reported_k": 2,
+    "source_reported_k_verified": true,
+    "status_source": "logs/runlim_benchmark_no_symmetry.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 2,
+    "constraint_k": 2,
+    "positions": {
+      "1": [
+        1,
+        6
+      ],
+      "10": [
+        6,
+        6
+      ],
+      "11": [
+        5,
+        4
+      ],
+      "12": [
+        7,
+        4
+      ],
+      "13": [
+        7,
+        3
+      ],
+      "14": [
+        6,
+        5
+      ],
+      "15": [
+        6,
+        3
+      ],
+      "16": [
+        6,
+        4
+      ],
+      "17": [
+        1,
+        4
+      ],
+      "18": [
+        2,
+        4
+      ],
+      "19": [
+        2,
+        2
+      ],
+      "2": [
+        1,
+        7
+      ],
+      "20": [
+        1,
+        2
+      ],
+      "21": [
+        3,
+        1
+      ],
+      "22": [
+        4,
+        4
+      ],
+      "23": [
+        5,
+        5
+      ],
+      "24": [
+        5,
+        6
+      ],
+      "25": [
+        5,
+        7
+      ],
+      "26": [
+        7,
+        5
+      ],
+      "27": [
+        2,
+        1
+      ],
+      "28": [
+        2,
+        3
+      ],
+      "29": [
+        4,
+        1
+      ],
+      "3": [
+        3,
+        7
+      ],
+      "30": [
+        2,
+        6
+      ],
+      "31": [
+        1,
+        1
+      ],
+      "32": [
+        3,
+        4
+      ],
+      "33": [
+        4,
+        5
+      ],
+      "34": [
+        3,
+        3
+      ],
+      "35": [
+        3,
+        2
+      ],
+      "36": [
+        5,
+        2
+      ],
+      "37": [
+        3,
+        5
+      ],
+      "38": [
+        4,
+        6
+      ],
+      "39": [
+        6,
+        2
+      ],
+      "4": [
+        2,
+        7
+      ],
+      "40": [
+        7,
+        2
+      ],
+      "41": [
+        6,
+        7
+      ],
+      "42": [
+        4,
+        7
+      ],
+      "43": [
+        7,
+        7
+      ],
+      "44": [
+        3,
+        6
+      ],
+      "45": [
+        4,
+        2
+      ],
+      "46": [
+        5,
+        1
+      ],
+      "47": [
+        7,
+        1
+      ],
+      "48": [
+        6,
+        1
+      ],
+      "49": [
+        5,
+        3
+      ],
+      "5": [
+        2,
+        5
+      ],
+      "6": [
+        4,
+        3
+      ],
+      "7": [
+        1,
+        3
+      ],
+      "8": [
+        1,
+        5
+      ],
+      "9": [
+        7,
+        6
+      ]
+    },
+    "valid": true
+  }
+}

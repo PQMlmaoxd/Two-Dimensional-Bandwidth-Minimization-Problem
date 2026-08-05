@@ -1,0 +1,6 @@
+[INFO] Loaded graph from gre__115.mtx: n=115, m=421
+[INFO] grid mode = sqrt, eta = 11, grid = 11x11 = 121 cells
+CP_RESULT: beta=5 status=TIMEOUT
+METRIC: cp_solve_time_s=3600.000
+METRIC: cp_status=TIMEOUT
+METRIC: cp_best_obj=5

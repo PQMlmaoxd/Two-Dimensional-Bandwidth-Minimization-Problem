@@ -1,0 +1,6 @@
+[INFO] Loaded graph from jgl011.mtx: n=11, m=76
+[INFO] grid mode = nxn, grid = 11x11 = 121 cells
+CP_RESULT: beta=4 status=OPTIMAL
+METRIC: cp_solve_time_s=738.780
+METRIC: cp_status=OPTIMAL
+METRIC: cp_best_obj=4

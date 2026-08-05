@@ -1,0 +1,76 @@
+{
+  "bounds": {
+    "certified_lower": 1,
+    "final_verified": 1,
+    "optimal": 1
+  },
+  "instance": {
+    "file": "submit_src_code/dataset/regular set/p2xp3.mtx",
+    "graph_edges": 7,
+    "graph_interpretation": "legacy-edge-list-v1",
+    "matrix": {
+      "cols": 6,
+      "declared_entries": 7,
+      "field": "pattern",
+      "rows": 6,
+      "symmetry": "undirected-edge-list"
+    },
+    "sha256": "d179785198e72cca38fbd87fbe4f1a56bd038963555712fb7443906faa8b6068",
+    "vertices": 6
+  },
+  "method": {
+    "grid": {
+      "cols": 3,
+      "policy": "ceil-sqrt-square",
+      "rows": 3
+    },
+    "id": "naive-amo",
+    "solver": "cadical195",
+    "solver_script": "python/solvers/comparision/incremental_bandwidth_solver_cutoff_symmetry_naive_amo_nodrsa.py"
+  },
+  "outcome": {
+    "elapsed_s": 1.28,
+    "status": "OPTIMAL_BY_BOUND",
+    "termination": "minimum_positive_bandwidth",
+    "termination_k": 1,
+    "timeout_s": 3600
+  },
+  "provenance": {
+    "legacy_artifact": "regular naive amo/p2xp3__naive_amo_verify.txt",
+    "source_reported_k": 1,
+    "source_reported_k_verified": true,
+    "status_source": "logs/runlim_benchmark_regular_naive_amo.csv"
+  },
+  "schema": "2dbmp-verification-v1",
+  "witness": {
+    "actual_bandwidth": 1,
+    "constraint_k": 1,
+    "positions": {
+      "1": [
+        2,
+        3
+      ],
+      "2": [
+        2,
+        1
+      ],
+      "3": [
+        1,
+        1
+      ],
+      "4": [
+        1,
+        2
+      ],
+      "5": [
+        2,
+        2
+      ],
+      "6": [
+        1,
+        3
+      ]
+    },
+    "valid": true
+  }
+}
