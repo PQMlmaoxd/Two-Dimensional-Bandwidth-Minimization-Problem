@@ -1,83 +1,165 @@
-# 2DBMP Experimental Artifact
+<div align="center">
 
-This artifact contains the exact SAT implementations, benchmark inputs, result
-summaries, and independently checked feasible-witness records for the
-two-dimensional bandwidth minimization problem.
+# Two-Dimensional Bandwidth Minimization
 
-## Requirements
+**Exact SAT methods, benchmark inputs, and result records for the two-dimensional bandwidth minimization problem.**
 
-- Python 3.10 or newer
-- `python-sat>=1.9.dev3,<2`
-- A C++17 compiler only when building the optional DRSA upper-bound heuristic
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-3776AB.svg)](requirements.txt)
 
-Install the core dependency with:
+[Quick start](#quick-start) · [Methods](#methods) · [Results](#results) · [Verification](#verification) · [Datasets](dataset/README.md) · [DRSA heuristic](drsa/README.md)
+
+</div>
+
+This repository accompanies the paper *An Exact Approach for the 2D Bandwidth Minimization Problem using SAT-based Sequence Counting*. It contains the SAT encodings and solver workers, the benchmark inputs, the recorded results, and a checker for those results.
+
+## The problem
+
+Place the vertices of an undirected graph on distinct cells of a grid. The bandwidth of a placement is the largest Manhattan distance between the cells of two adjacent vertices. The goal is a placement with the smallest possible bandwidth. The [methods table](#methods) lists the host grid each method uses.
+
+## Installation
+
+Requirements:
+
+- Python 3.10 or newer.
+- `python-sat` 1.9.dev3 or newer, below 2.0, as pinned in `requirements.txt`.
+- GNU make (optional). The Makefile wraps the DRSA build, the unit tests, and the verification.
+- A C++17 compiler for the DRSA heuristic only. GCC 6 cannot build `drsa/drsa.cpp`, which uses structured bindings.
 
 ```bash
 python3 -m pip install -r requirements.txt
 ```
 
-The commercial models under `cplex_gurobi/` are optional and are not required
-for the SAT implementations or verification tools. Their external requirements
-are:
+### Windows
 
-- Gurobi: a working Gurobi installation and license.
-- CPLEX CP: IBM CPLEX Optimization Studio and the `docplex` Python package.
-- CPLEX MIP: IBM CPLEX Optimization Studio and the matching `cplex` Python
-  API.
+- Use `python` instead of `python3`, and pass `PYTHON=python` to `make`.
+- Clone with CRLF conversion off, and use a short path:
 
-## Run One Instance
+  ```bash
+  git -c core.autocrlf=false clone https://github.com/PQMlmaoxd/Two-Dimensional-Bandwidth-Minimization-Problem.git C:/src/2dbmp
+  ```
 
-Run commands from this directory. The public entrypoint supervises a worker
-process, applies a wall-clock deadline, retains stdout/stderr logs beside the
-output, and publishes one terminal JSON result.
+  With `core.autocrlf=true`, Git writes the `.mtx` files with CRLF endings. The verifier compares SHA-256 hashes with the files on disk, so `make verify` fails on its first record. Some record names are long, so a clone in a deep folder can exceed the 260-character path limit.
+- Set `PYTHONUTF8=1` before running the solver (`$env:PYTHONUTF8 = "1"` in PowerShell). The solver prints Unicode arrows, and on a Windows code page other than UTF-8 the worker fails with an encoding error, which ends the run as `INTERRUPTED_FEASIBLE`.
+- The wall-clock limit in `python.solve` and the batch runner uses POSIX process groups. On Windows, a run that reaches its limit ends with a `2dbmp-run-error-v1` record. Use Linux, macOS, or WSL for time-limited runs.
+- `make drsa` writes `build/drsa.exe`. Set `DRSA_BINARY=build/drsa.exe` so that `python.utils.drsa_upper_bound` finds the binary.
+
+## Quick start
+
+Run one instance with the `square` method. On Windows, read the [Windows notes](#windows) first.
 
 ```bash
 python3 -m python.solve "dataset/regular set/path10.mtx" \
   --method square --solver cadical195 --timeout 3600 \
-  --output /tmp/path10_square.json
+  --output build/path10_square.json
 ```
 
-Supported `--method` values are `square`, `square-non-incremental`,
-`square-no-symmetry`, `square-naive-amo`, `square-standard`, `nxn`, and
-`two-row`. CaDiCaL 1.9.5 (`cadical195`) is the default backend.
+The command writes one JSON record to `--output`, with `.stdout.log` and `.stderr.log` files beside it. The record's `outcome.status` is `OPTIMAL_BY_UNSAT`, `OPTIMAL_BY_BOUND`, `TIMEOUT_FEASIBLE`, or `INTERRUPTED_FEASIBLE`. If the run fails, for example because the input file is missing, the record has schema `2dbmp-run-error-v1`. The command exits with 0 when it writes a verification record and with 2 otherwise.
 
-For a batch, provide repeatable instance paths in a text manifest, one path per
-line:
+## Methods
+
+| `--method` | Description | Host grid |
+| --- | --- | --- |
+| `square` (default) | Incremental SAT with cutoff and symmetry breaking | ⌈√n⌉ × ⌈√n⌉ |
+| `square-non-incremental` | `square` without incremental solving | ⌈√n⌉ × ⌈√n⌉ |
+| `square-no-symmetry` | `square` without symmetry breaking | ⌈√n⌉ × ⌈√n⌉ |
+| `square-naive-amo` | `square` with a naive at-most-one encoding | ⌈√n⌉ × ⌈√n⌉ |
+| `square-standard` | `square` with the standard symmetry encoding | ⌈√n⌉ × ⌈√n⌉ |
+| `nxn` | Incremental SAT with cutoff and symmetry breaking | n × n |
+| `two-row` | Incremental SAT for the two-row host | 2 × ⌈n/2⌉ |
+
+| Option | Default | Meaning |
+| --- | --- | --- |
+| `--method` | `square` | A method from the table above |
+| `--solver` | `cadical195` | PySAT solver name. `cadical195` is CaDiCaL 1.9.5. |
+| `--timeout` | `3600` | Wall-clock limit in seconds. `0` disables the limit. |
+| `--output` | required | Path of the JSON record |
+| `--sa-k` | none | Reference bound, `two-row` only |
+| `--quiet` | off | Silences progress output, `two-row` only |
+
+## Batch runs
 
 ```bash
-python3 -m python.benchmarks.batch --method nxn --output-dir /tmp/nxn \
-  --dataset-root . --instances-file instances.txt
+python3 -m python.benchmarks.batch --method nxn \
+  --output-dir build/nxn --dataset-root . --instances-file instances.txt
 ```
+
+The manifest holds one instance per line. Relative paths resolve against `--dataset-root`, and lines that start with `#` are skipped:
+
+```text
+# One instance per line
+dataset/regular set/path10.mtx
+dataset/Harwell Boeing set/arc130.mtx
+```
+
+Repeated `--instance` options add instances without a manifest. The batch writes `<stem>__<method>_verify.json` for each instance, plus a `batch_manifest.json` beside them. It exits with 0 when every record has the verification schema.
 
 ## Results
 
-- `results/csv_res/` contains eight CSV summaries covering Regular and
-  Harwell-Boeing instances on square, n×n, and two-row hosts.
-- `results/logs/SAT/` contains JSON witness records for the SAT methods.
-- `results/logs/CPLEX/` and `results/logs/GUROBI/` contain the structured
-  `.out` records for the commercial CP, CPLEX MIP, and Gurobi runs.
+`results/csv_res/` holds eight CSV summaries for the Regular and Harwell-Boeing sets on square, n × n, and two-row hosts. Each row gives the instance, its vertex count `n`, its declared entry count `E`, and, for each solver, the value of `K`, the solve time in seconds, and the status. For Harwell-Boeing matrices, `E` counts the declared Matrix Market entries, which need not equal the number of simple-graph edges.
 
-Verify the SAT witness records from this directory:
+`results/logs/SAT/` holds 908 JSON records from the SAT methods, plus one `manifest.json`. Each record names the instance, method, host grid, status, bounds, and placement. Timed-out runs that found no placement use the schema `2dbmp-no-witness-v1` and have no placement.
+
+| Status | Meaning | Records |
+| --- | --- | --- |
+| `OPTIMAL_BY_UNSAT` | No placement has a bandwidth one below the reported value | 434 |
+| `OPTIMAL_BY_BOUND` | A certified lower bound equals the reported bandwidth | 91 |
+| `TIMEOUT_FEASIBLE` | The time limit ended the run with a verified placement, without an optimality proof | 354 |
+| `TIMEOUT_NO_WITNESS` | The time limit ended the run before any feasible placement was found | 29 |
+
+`results/logs/CPLEX/` (with `CP/` and `MIP/` subfolders, 728 files) and `results/logs/GUROBI/` (364 files) hold the `.out` logs of the commercial runs.
+
+## Verification
 
 ```bash
-python3 -m python.utils.verification_artifacts verify --root results/logs/SAT
+make verify
 ```
 
-Harwell-Boeing `E` values in the CSV summaries denote declared Matrix Market
-entries, not necessarily normalized simple-graph edge counts.
+This runs `python -m python.utils.verification_artifacts verify --root results/logs/SAT`. For each record, the verifier:
 
-## DRSA
+- checks the SHA-256 hash of the input file,
+- parses the input and compares the graph with the metadata in the record,
+- recomputes the bandwidth of the stored placement on the recorded host,
+- checks the status against the bounds and the termination K.
 
-Build the optional C++17 DRSA-style upper-bound heuristic with `make drsa`.
-The output is written to `build/drsa` and is intentionally not stored in the
-artifact. It accepts a Matrix Market file, seed, and wall-clock budget, and is
-used through `python.utils.drsa_upper_bound`.
+The root-level check skips each subfolder that contains its own `manifest.json`. That leaves out the 93 records in `results/logs/SAT/Harwell Boeing two row/`, so `make verify` reports `Verified: 815 artifacts`. Check that folder on its own:
 
-## Layout
+```bash
+python3 -m python.utils.verification_artifacts verify \
+  --root "results/logs/SAT/Harwell Boeing two row"
+```
 
-- `python/encoders/`: SAT encodings.
-- `python/solvers/`: exact solver workers and backend factory.
-- `python/utils/`: parsing, verification, checkpoint, and process-supervision
-  utilities.
-- `dataset/`: 43 Regular and 93 Harwell-Boeing Matrix Market inputs.
-- `cplex_gurobi/`: optional commercial formulations.
+This reports `Verified: 93 artifacts`.
+
+## DRSA heuristic
+
+[`drsa/`](drsa/README.md) contains a simulated-annealing heuristic that returns an upper bound on the bandwidth. `make drsa` builds it into `build/drsa`, and `python.utils.drsa_upper_bound` calls it.
+
+## Optional commercial models
+
+`cplex_gurobi/` holds formulations for IBM CPLEX (CP Optimizer and MIP) and Gurobi. The repository does not include these solvers or their licenses.
+
+- `2dbmp_cp.py` builds a CP Optimizer model with the `docplex` package. It looks for the `cpoptimizer` executable from IBM CPLEX Optimization Studio, set through `CPOPTIMIZER_BINARY` or on `PATH`.
+- `2dbmp_ilp.py` with `--solver lp` writes an LP file and needs no solver. `--solver gurobi` needs `gurobipy` and a Gurobi license. `--solver cplex` runs the `cplex` executable, set through `CPLEX_BINARY` or on `PATH`, and falls back to the `docplex` package when no executable is found.
+
+## Repository layout
+
+| Path | Contents |
+| --- | --- |
+| `python/encoders/` | SAT encodings for distance, position, and symmetry-breaking constraints |
+| `python/solvers/` | Solver workers, the method registry in `entrypoints.py`, and the solver factory |
+| `python/benchmarks/` | Batch runner |
+| `python/utils/` | Input parsing, host grids, process supervision, and verification |
+| `python/tests/` | Unit tests |
+| `drsa/` | DRSA-style upper-bound heuristic in C++17 |
+| `dataset/` | Benchmark inputs |
+| `results/` | CSV summaries and run logs |
+| `cplex_gurobi/` | Optional commercial formulations |
+
+## Tests
+
+`make test` runs the unit tests in `python/tests/`. Install the pinned `python-sat` first. One test uses the `cadical300` solver, which needs `python-sat` 1.9.dev3 or newer. On Windows, `test_timeout_terminates_child_process_group` fails because the supervisor relies on POSIX process groups.
+
+## License
+
+Apache License 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE). NOTICE lists the third-party components: PySAT, CaDiCaL and Glucose (used through PySAT), the Harwell-Boeing inputs from the SuiteSparse Matrix Collection, and the optional IBM CPLEX and Gurobi tools, which are not included.
