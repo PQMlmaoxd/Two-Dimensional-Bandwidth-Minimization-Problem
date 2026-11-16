@@ -24,6 +24,18 @@ def _terminate_group(process: subprocess.Popen[bytes], grace_s: float) -> None:
 
     if process.poll() is not None:
         return
+    if os.name == "nt":
+        # Windows has no process groups or SIGTERM for console programs, so
+        # taskkill /T stops the child and all of its descendants at once.
+        subprocess.run(
+            ["taskkill", "/PID", str(process.pid), "/T", "/F"],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            check=False,
+        )
+        process.kill()
+        process.wait()
+        return
     try:
         os.killpg(process.pid, signal.SIGTERM)
     except ProcessLookupError:
@@ -71,6 +83,8 @@ def run_supervised(
             stdin=subprocess.DEVNULL,
             stdout=stdout,
             stderr=stderr,
+            # Workers print Unicode, which fails under a non-UTF-8 code page such as cp1258.
+            env={**os.environ, "PYTHONUTF8": "1"},
             start_new_session=True,
         )
         timed_out = False
