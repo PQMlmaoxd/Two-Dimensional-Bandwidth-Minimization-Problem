@@ -1,0 +1,2 @@
+# Matrix Market inputs are hashed in the result records, so their bytes must stay as committed (LF).
+*.mtx -text
