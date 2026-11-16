@@ -1,29 +1,38 @@
 # DRSA upper-bound heuristic
 
-`drsa.cpp` is a C++17 reconstruction of the DRSA-style simulated-annealing
-upper-bound heuristic used by this artifact. It implements the square-grid
-evaluation described in:
+`drsa/drsa.cpp` is an implementation of the DRSA-style simulated annealing heuristic for the square-grid evaluation in:
 
-> Torres-Jimenez, J. et al. "Two dimensional bandwidth minimization problem
-> using a novel evaluation function." *Expert Systems With Applications* 290
-> (2025), 127986. https://doi.org/10.1016/j.eswa.2025.127986
+> Torres-Jimenez, J. et al. "Two dimensional bandwidth minimization problem using a novel evaluation function." *Expert Systems With Applications* 290 (2025), 127986. https://doi.org/10.1016/j.eswa.2025.127986
 
-The search keeps a position permutation and its inverse, uses random exchange,
-edge-neighborhood exchange, and short rotations with probabilities 0.6, 0.2,
-and 0.2, and applies simulated annealing. Its evaluation is the bandwidth plus
-the normalized mixed-radix edge-distance rank from Equation (17).
+## Search
 
-Build it from the artifact root:
+The search keeps a position permutation and its inverse. Each step applies one of three moves:
+
+- A random exchange of two positions, with probability 0.6.
+- An exchange of the positions of the two endpoints of a random edge, with probability 0.2.
+- A left rotation over a span of at most five positions, with probability 0.2.
+
+The score is the bandwidth plus the normalized mixed-radix edge-distance rank from Equation (17) of the paper.
+
+The annealing starts at temperature 1000 and multiplies the temperature by 0.99 after each chain. It stops below 10⁻¹². A chain runs for 400 moves at the start. Its length grows as the temperature falls, up to `max(400, 10·n·m)` moves, where `n` is the number of vertices and `m` is the number of edges.
+
+## Build and run
 
 ```bash
 make drsa
+build/drsa "dataset/regular set/path10.mtx" 42 10
 ```
 
-The executable interface is:
+The arguments are the matrix file, the seed, and the time limit in seconds. A positive time limit is a wall-clock budget, and `0` runs the complete cooling schedule. The program prints `RESULT <bandwidth>` on stdout. It exits with 2 on a usage error and with 1 on an input error, which it reports on stderr.
 
-```bash
-build/drsa <matrix.mtx> <seed> <time_limit_s>
-```
+The build needs a C++17 compiler with structured bindings. GCC 6 fails on `drsa.cpp`. With MinGW, `make drsa` writes `build/drsa.exe`.
 
-It writes `RESULT <bandwidth>` to stdout. A positive time limit is a wall-clock
-budget; `0` runs the complete cooling schedule.
+## Input rules
+
+The reader in `drsa.cpp` is separate from the parser in `python/utils/mtx_parser.py`, and its rules differ:
+
+- It accepts square coordinate matrices only. The four rectangular Harwell-Boeing matrices (`ash219`, `wm1`, `wm2`, `wm3`) are rejected.
+- It reads the index pairs and ignores the values. Diagonal entries are dropped, and duplicate pairs are merged.
+- Because it ignores values, entries whose value is zero become edges. The Python parser drops them. Fifteen Harwell-Boeing files contain such entries.
+
+The DRSA graph contains every edge of the parser's graph. The reported value is therefore still an upper bound for the parser's graph on the same square host, though it can be looser.
