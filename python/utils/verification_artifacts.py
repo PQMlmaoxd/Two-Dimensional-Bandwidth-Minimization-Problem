@@ -238,22 +238,30 @@ def _manifest_artifacts(root: Path) -> list[str] | None:
     return sorted(entries)
 
 
-def verify_tree(root: Path) -> Counter[str]:
-    root = root.resolve()
-    files = sorted(
+def _record_paths(root: Path) -> list[Path]:
+    """Records directly in ``root`` and in its subfolders, except folders with their own manifest."""
+
+    return sorted(
         path
-        for path in root.glob("*/*.json")
+        for path in [*root.glob("*.json"), *root.glob("*/*.json")]
         if path.name != "manifest.json"
         and (path.parent == root or not (path.parent / "manifest.json").is_file())
     )
-    if not files:
-        files = sorted(path for path in root.glob("*.json") if path.name != "manifest.json")
+
+
+def _verification_roots(root: Path) -> list[Path]:
+    """``root`` and every folder below it that has its own manifest.json."""
+
+    nested = sorted(path.parent for path in root.glob("**/manifest.json") if path.parent != root)
+    return [root, *nested]
+
+
+def _verify_records(root: Path) -> Counter[str]:
+    files = _record_paths(root)
     actual = [path.relative_to(root).as_posix() for path in files]
     manifest = _manifest_artifacts(root)
     if manifest is not None and actual != manifest:
         raise ValueError("Verification artifacts do not match manifest")
-    if not files:
-        raise ValueError(f"No verification artifacts found under {root}")
     counts: Counter[str] = Counter()
     for path in files:
         payload = json.loads(path.read_text(encoding="utf-8"))
@@ -268,20 +276,19 @@ def verify_tree(root: Path) -> Counter[str]:
     return counts
 
 
+def verify_tree(root: Path) -> Counter[str]:
+    root = root.resolve()
+    counts: Counter[str] = Counter()
+    for tree in _verification_roots(root):
+        counts.update(_verify_records(tree))
+    if not sum(counts.values()):
+        raise ValueError(f"No verification artifacts found under {root}")
+    return counts
+
+
 def write_manifest(root: Path) -> Path:
     root = root.resolve()
-    paths = sorted(
-        path
-        for path in root.glob("*/*.json")
-        if path.name != "manifest.json"
-        and (path.parent == root or not (path.parent / "manifest.json").is_file())
-    )
-    if not paths:
-        paths = sorted(path for path in root.glob("*.json") if path.name != "manifest.json")
-    artifacts = [
-        path.relative_to(root).as_posix()
-        for path in paths
-    ]
+    artifacts = [path.relative_to(root).as_posix() for path in _record_paths(root)]
     if not artifacts:
         raise ValueError(f"No verification artifacts found under {root}")
     path = root / "manifest.json"
