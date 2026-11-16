@@ -11,7 +11,7 @@ $(DRSA_BIN): drsa/drsa.cpp
 
 	g++ -O3 -std=c++17 -Wall -Wextra $< -o $@
 
-test:
+test: drsa
 
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) -m unittest discover -s python/tests -p 'test_*.py'
 

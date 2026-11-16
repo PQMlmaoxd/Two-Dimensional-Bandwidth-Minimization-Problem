@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <cctype>
 #include <chrono>
 #include <cmath>
 #include <cstdlib>
@@ -32,6 +33,33 @@ constexpr double kCoolingFactor = 0.99;
 constexpr int kInitialMarkovLength = 400;
 constexpr int kRotationLimit = 5;
 
+std::string to_lower(std::string text) {
+    std::transform(text.begin(), text.end(), text.begin(),
+        [](unsigned char c) { return static_cast<char>(std::tolower(c)); });
+    return text;
+}
+
+// Reads the value of one coordinate entry and reports whether it is zero.
+// Pattern entries have no value, so they always count.
+bool has_zero_value(std::istringstream& fields, const std::string& value_type) {
+    if (value_type == "pattern") {
+        return false;
+    }
+    if (value_type == "complex") {
+        double real = 0.0;
+        double imaginary = 0.0;
+        if (!(fields >> real >> imaginary)) {
+            throw std::runtime_error("invalid complex coordinate value");
+        }
+        return real == 0.0 && imaginary == 0.0;
+    }
+    double value = 0.0;
+    if (!(fields >> value)) {
+        throw std::runtime_error("invalid coordinate value");
+    }
+    return value == 0.0;
+}
+
 Graph read_matrix_market(const std::string& path) {
     std::ifstream input(path);
     if (!input) {
@@ -43,11 +71,29 @@ Graph read_matrix_market(const std::string& path) {
     int cols = 0;
     long long declared_entries = 0;
     bool dimensions_read = false;
+    std::string value_type = "pattern";  // legacy edge lists have no banner and no values
     std::set<std::pair<int, int>> edge_set;
 
     while (std::getline(input, line)) {
         const auto first = line.find_first_not_of(" \t\r\n");
-        if (first == std::string::npos || line[first] == '%') {
+        if (first == std::string::npos) {
+            continue;
+        }
+        if (line[first] == '%') {
+            std::istringstream banner(line.substr(first));
+            std::string tag;
+            std::string object;
+            std::string format;
+            std::string field;
+            banner >> tag >> object >> format >> field;
+            if (to_lower(tag) == "%%matrixmarket") {
+                value_type = to_lower(field);
+                if (to_lower(object) != "matrix" || to_lower(format) != "coordinate"
+                    || (value_type != "pattern" && value_type != "real"
+                        && value_type != "integer" && value_type != "complex")) {
+                    throw std::runtime_error("input must be a Matrix Market coordinate matrix");
+                }
+            }
             continue;
         }
 
@@ -71,7 +117,9 @@ Graph read_matrix_market(const std::string& path) {
         if (u < 1 || v < 1 || u > rows || v > cols) {
             throw std::runtime_error("coordinate is outside the declared matrix");
         }
-        if (u != v) {
+        // As in python/utils/mtx_parser.py, zero-valued entries are not edges.
+        const bool zero_valued = has_zero_value(fields, value_type);
+        if (u != v && !zero_valued) {
             --u;
             --v;
             if (u > v) {
@@ -118,9 +166,9 @@ Evaluation evaluate(
     std::vector<long long> edge_counts(pair_counts.size(), 0);
     int bandwidth = 0;
 
-    for (const auto& [u, v] : edges) {
-        const int pu = inverse[u];
-        const int pv = inverse[v];
+    for (const auto& edge : edges) {
+        const int pu = inverse[edge.first];
+        const int pv = inverse[edge.second];
         const int distance = std::abs(pu / side - pv / side)
             + std::abs(pu % side - pv % side);
         ++edge_counts[distance];
@@ -193,11 +241,9 @@ void rotate_right(
 int markov_length(double temperature, int vertices, std::size_t edges) {
     const long long final_length = std::max<long long>(
         kInitialMarkovLength, 10LL * vertices * static_cast<long long>(edges));
-    const double progress = std::clamp(
-        std::log(kInitialTemperature / temperature)
-            / std::log(kInitialTemperature / kFinalTemperature),
-        0.0,
-        1.0);
+    const double ratio = std::log(kInitialTemperature / temperature)
+        / std::log(kInitialTemperature / kFinalTemperature);
+    const double progress = std::min(1.0, std::max(0.0, ratio));  // std::clamp is missing from GCC 6
     return static_cast<int>(std::llround(
         kInitialMarkovLength + progress * (final_length - kInitialMarkovLength)));
 }
@@ -254,9 +300,9 @@ int solve_drsa(const Graph& graph, unsigned long long seed, double time_limit) {
                 } while (last == first);
                 swap_positions(current_permutation, current_inverse, first, last);
             } else if (choice < 0.8) {
-                const auto& [u, v] = graph.edges[edge_distribution(random)];
-                first = current_inverse[u];
-                last = current_inverse[v];
+                const auto& edge = graph.edges[edge_distribution(random)];
+                first = current_inverse[edge.first];
+                last = current_inverse[edge.second];
                 swap_positions(current_permutation, current_inverse, first, last);
             } else {
                 first = position_distribution(random);

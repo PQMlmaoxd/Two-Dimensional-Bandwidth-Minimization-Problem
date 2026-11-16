@@ -25,14 +25,14 @@ build/drsa "dataset/regular set/path10.mtx" 42 10
 
 The arguments are the matrix file, the seed, and the time limit in seconds. A positive time limit is a wall-clock budget, and `0` runs the complete cooling schedule. The program prints `RESULT <bandwidth>` on stdout. It exits with 2 on a usage error and with 1 on an input error, which it reports on stderr.
 
-The build needs a C++17 compiler with structured bindings. GCC 6 fails on `drsa.cpp`. With MinGW, `make drsa` writes `build/drsa.exe`.
+The source needs a C++17 compiler. It builds with MinGW GCC 6.3, the version tested here. With MinGW, `make drsa` writes `build/drsa.exe`.
 
 ## Input rules
 
-The reader in `drsa.cpp` is separate from the parser in `python/utils/mtx_parser.py`, and its rules differ:
+The reader in `drsa.cpp` is separate from the parser in `python/utils/mtx_parser.py`. For square matrices, it applies the same graph rules:
 
 - It accepts square coordinate matrices only. The four rectangular Harwell-Boeing matrices (`ash219`, `wm1`, `wm2`, `wm3`) are rejected.
-- It reads the index pairs and ignores the values. Diagonal entries are dropped, and duplicate pairs are merged.
-- Because it ignores values, entries whose value is zero become edges. The Python parser drops them. Fifteen Harwell-Boeing files contain such entries.
+- It drops diagonal entries and merges duplicate pairs.
+- It drops zero-valued entries, as the parser does. Pattern matrices have no values, so all of their entries count. An entry without its value is an error.
 
-The DRSA graph contains every edge of the parser's graph. The reported value is therefore still an upper bound for the parser's graph on the same square host, though it can be looser.
+For square matrices, the DRSA graph is the parser's graph. The reported value is therefore an upper bound on the minimum bandwidth of that graph on the square host.
