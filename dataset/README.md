@@ -26,4 +26,4 @@ Four Harwell-Boeing matrices are rectangular: `ash219` (219 Ã— 85), `wm1` (207 Ã
 
 It accepts the `pattern`, `integer`, `real`, and `complex` fields, and the `general`, `symmetric`, `skew-symmetric`, and `hermitian` symmetry tags.
 
-The DRSA reader in [`drsa/`](../drsa/README.md) does not follow these rules.
+For square matrices, the DRSA reader in [`drsa/`](../drsa/README.md) follows the same rules. It rejects rectangular matrices.

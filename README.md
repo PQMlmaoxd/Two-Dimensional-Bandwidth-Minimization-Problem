@@ -24,7 +24,7 @@ Requirements:
 - Python 3.10 or newer.
 - `python-sat` 1.9.dev3 or newer, below 2.0, as pinned in `requirements.txt`.
 - GNU make (optional). The Makefile wraps the DRSA build, the unit tests, and the verification.
-- A C++17 compiler for the DRSA heuristic only. GCC 6 cannot build `drsa/drsa.cpp`, which uses structured bindings.
+- A C++17 compiler for the DRSA heuristic, which `make test` also builds. MinGW GCC 6.3 builds `drsa/drsa.cpp`. Other compilers are untested.
 
 ```bash
 python3 -m pip install -r requirements.txt
@@ -33,15 +33,15 @@ python3 -m pip install -r requirements.txt
 ### Windows
 
 - Use `python` instead of `python3`, and pass `PYTHON=python` to `make`.
-- Clone with CRLF conversion off, and use a short path:
+- Clone to a short path, because some record names are long and a deep folder can exceed the 260-character path limit:
 
   ```bash
-  git -c core.autocrlf=false clone https://github.com/PQMlmaoxd/Two-Dimensional-Bandwidth-Minimization-Problem.git C:/src/2dbmp
+  git clone https://github.com/PQMlmaoxd/Two-Dimensional-Bandwidth-Minimization-Problem.git C:/src/2dbmp
   ```
 
-  With `core.autocrlf=true`, Git writes the `.mtx` files with CRLF endings. The verifier compares SHA-256 hashes with the files on disk, so `make verify` fails on its first record. Some record names are long, so a clone in a deep folder can exceed the 260-character path limit.
-- Set `PYTHONUTF8=1` before running the solver (`$env:PYTHONUTF8 = "1"` in PowerShell). The solver prints Unicode arrows, and on a Windows code page other than UTF-8 the worker fails with an encoding error, which ends the run as `INTERRUPTED_FEASIBLE`.
-- The wall-clock limit in `python.solve` and the batch runner uses POSIX process groups. On Windows, a run that reaches its limit ends with a `2dbmp-run-error-v1` record. Use Linux, macOS, or WSL for time-limited runs.
+  `.gitattributes` keeps the `.mtx` inputs with LF endings, whatever `core.autocrlf` is set to. The verifier compares their SHA-256 hashes with the files on disk, so CRLF endings would fail `make verify`. A clone made before `.gitattributes` was added has CRLF copies of these files, so clone again rather than editing them.
+- The workers run in UTF-8 mode, so the solver's Unicode output works on any Windows code page.
+- A wall-clock limit stops the worker and every process it started, on Windows as on POSIX systems. The run then ends with its normal record.
 - `make drsa` writes `build/drsa.exe`. Set `DRSA_BINARY=build/drsa.exe` so that `python.utils.drsa_upper_bound` finds the binary.
 
 ## Quick start
@@ -122,7 +122,7 @@ This runs `python -m python.utils.verification_artifacts verify --root results/l
 - recomputes the bandwidth of the stored placement on the recorded host,
 - checks the status against the bounds and the termination K.
 
-The root-level check skips each subfolder that contains its own `manifest.json`. That leaves out the 93 records in `results/logs/SAT/Harwell Boeing two row/`, so `make verify` reports `Verified: 815 artifacts`. Check that folder on its own:
+A folder with its own `manifest.json` is verified as a separate tree, and its manifest must match its records. `results/logs/SAT/Harwell Boeing two row/` is such a folder, so `make verify` covers all 908 records. To check one tree on its own:
 
 ```bash
 python3 -m python.utils.verification_artifacts verify \
@@ -158,7 +158,7 @@ This reports `Verified: 93 artifacts`.
 
 ## Tests
 
-`make test` runs the unit tests in `python/tests/`. Install the pinned `python-sat` first. One test uses the `cadical300` solver, which needs `python-sat` 1.9.dev3 or newer. On Windows, `test_timeout_terminates_child_process_group` fails because the supervisor relies on POSIX process groups.
+`make test` builds the DRSA binary and runs the unit tests in `python/tests/`. Install the pinned `python-sat` first. One test uses the `cadical300` solver, which needs `python-sat` 1.9.dev3 or newer.
 
 ## License
 
